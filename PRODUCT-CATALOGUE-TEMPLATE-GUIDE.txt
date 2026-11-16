@@ -1,0 +1,48 @@
+CAPVORA PRODUCT CATALOGUE TEMPLATE — V8
+
+What is included
+- 19 independent hat-category directory pages under /hat-styles/.
+- 16 blank product cards per category (4 columns x 4 rows on desktop).
+- 304 individual product detail pages under /products/<category>/product-01.html ... product-16.html.
+- Every category page has a left sidebar with all 19 categories plus logo-technique, material and application filters.
+- Each product card has a Read More → link to its own unique product detail page.
+- Each product detail page has blank image areas and editable sections:
+  Specifications, Description, Product Attributes, Customization, Packing & Shipping.
+- Black Request a Quote and Online Design buttons reuse the existing site quote modal.
+- Existing Capvora logo, header, footer, contact rail, WhatsApp/Email/Facebook links, navigation and black/white/grey visual theme are retained.
+
+No product hats or product photos were generated. All product image areas are neutral placeholders for the owner's own photos.
+
+How to add products later
+1. Open the relevant /hat-styles/<category>.html page.
+2. Find a card titled "Product Name — Item 01".
+3. Replace the placeholder image area with your own image, for example:
+   <img src="../../assets/products/baseball-caps/product-01.webp" alt="Your product name">
+   (For category listing pages, use ../assets/... or place images in /assets.)
+4. Replace the product name and short description.
+5. Open the matching detail page under /products/<category>/product-01.html.
+6. Replace the main image and thumbnail placeholders; fill in the real description and confirmed specifications.
+7. Add the product's actual filter attributes to its card's data-technique, data-material and data-scene values, separated by | when multiple values apply.
+
+Filter controls are wired, but placeholder cards intentionally have no assigned product attributes yet. They become meaningful as real product metadata is added.
+
+Layout
+- Desktop: 4 columns x 4 rows (16 product slots per category page).
+- Tablet: 3 columns.
+- Mobile: 2 columns; very narrow screens: 1 column.
+
+Important
+- All prices, materials, certificates, shipping promises and product specifications are left as editable placeholders or neutral wording. Do not publish unverified details.
+- SEO canonical URL and sitemap generation still requires the final Capvora HTTPS domain. Use generate-seo-files.py after setting SITE_URL.
+
+
+HOMEPAGE HAT-STYLE CAROUSEL UPDATE — V9
+- Homepage section title: Explore Our Hat Styles.
+- Homepage shows the first 8 hat categories only.
+- Desktop: 4 cards visible at once; 2 horizontal pages.
+- Mobile: 2 cards visible at once; 4 horizontal pages with native touch swipe.
+- Previous/Next arrows update the visible group; no autoplay or timer.
+- Page counter adapts to desktop/mobile.
+- Bottom link label: Explore More Hat Styles → (links to all-hat-styles.html; not limited to 19).
+- Existing hat category pages and all 304 product-detail templates remain included.
+- Existing theme, site navigation, quote CTA, footer and contact links remain unchanged.

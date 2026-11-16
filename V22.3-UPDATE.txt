@@ -1,0 +1,1 @@
+V22.3: Replaced beige RESO cap in the desktop hero with the gray and charcoal hat pair in the approved design. Updated mobile hat asset to the user-provided pair. All other website files preserved. This is a preview, not a deployment. Note: desktop hero background is a rendered composite, so its embedded text is not independently editable.

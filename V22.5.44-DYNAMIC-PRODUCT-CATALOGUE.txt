@@ -1,0 +1,13 @@
+YOUMUSE v22.5.44 — DYNAMIC PRODUCT CATALOGUE
+
+- Removed all 16 empty product placeholders from each of the 19 hat category pages.
+- Removed 304 blank product-detail placeholder files and their sitemap URLs.
+- Added shared products.json data source and dynamic category rendering.
+- Desktop grid: 4 columns x up to 4 rows (16 products per page).
+- Tablet and mobile: 2 columns.
+- Added automatic pagination only when more than 16 published products exist.
+- Added category-specific search and filters.
+- Added scripts/build-product-catalogue.py to generate SEO-friendly static detail pages and update sitemap.xml for future published products.
+- Added PRODUCT-CATALOGUE-PUBLISHING-GUIDE.txt.
+- No demo products or fake product records were published.
+- Existing homepage, category names, imagery, branding and other site sections retained.

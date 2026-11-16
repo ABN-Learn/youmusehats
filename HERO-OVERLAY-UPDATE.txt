@@ -1,0 +1,8 @@
+CAPVORA HOMEPAGE HERO UPDATE
+- Updated the homepage hero to place the headline and supporting copy directly over the
+  existing product photograph, using the photograph's white space and a soft white fade.
+- Kept the existing site theme/brand colors, navigation, quote actions, language selector,
+  craft highlights, seven highlights, pages, images, and scripts intact.
+- Desktop/tablet: text overlays the left side; product hats remain on the right.
+- Mobile: content stacks cleanly to keep text readable and product imagery unobstructed.
+- Preview: open index.html after extracting this ZIP.

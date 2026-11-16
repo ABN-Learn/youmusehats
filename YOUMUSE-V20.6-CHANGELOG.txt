@@ -1,0 +1,1 @@
+Homepage hero now uses separate 35% text / 40% three cap photos / 25% factory photo columns on desktop. Tablet/mobile layouts are responsive. Other pages unchanged. Preview only.

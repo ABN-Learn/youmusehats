@@ -1,0 +1,13 @@
+YOUMUSE v22.5.2 — Newsboy Caps Image Update
+
+Updated:
+- Replaced only the Newsboy Caps product image with the user-provided brown herringbone newsboy cap featuring the Brooklyn leather patch.
+- The supplied reference card screenshot was cropped to the product image area; the card title and interface overlays were not included.
+
+Preserved:
+- All other product images and hat styles.
+- Existing page content, navigation, links, layout, colors, and website functionality.
+
+Preview:
+- Open v13work/index.html for the homepage.
+- Open v13work/products.html or v13work/all-hat-styles.html to review the product catalogue.

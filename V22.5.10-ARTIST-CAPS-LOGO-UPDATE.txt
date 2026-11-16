@@ -1,0 +1,10 @@
+YOUMUSE v22.5.10 — Artist Caps Logo Update
+
+Base: v22.5.9 (includes the approved Berets B embroidery position update).
+
+Changes:
+- Replaced the Artist Caps catalog product image with the approved black artist cap featuring a realistic embroidered painter's palette and brush motif.
+- The shared Artist Caps image is used in both all-hat-styles.html and products.html, so both catalog locations now display the same updated image.
+- Preserved all other product styles, images, page content, layout, navigation, and functionality.
+
+Preview only. Not deployed.

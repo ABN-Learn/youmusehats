@@ -1,0 +1,13 @@
+CAPVORA V12 — START HERE
+
+1) Open index.html to preview the revised website.
+2) Open all-hat-styles.html to view the hat category index.
+3) Open blog.html to view all blog posts.
+4) Open blog-categories/ to preview the new topic archive pages.
+5) Open admin-preview/index.html to preview the separate V11-style admin prototype.
+6) Read V12-STRUCTURE-AUDIT-AND-CHANGELOG.txt for the audit and remaining launch tasks.
+
+IMPORTANT:
+This is a local preview. It has NOT been deployed.
+Before SEO files are finalized, confirm the production domain in site-config.json.
+The admin prototype is not yet a connected CMS; it does not save changes to this site.

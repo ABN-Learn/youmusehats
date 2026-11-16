@@ -1,0 +1,9 @@
+YOUMUSE V22.5.42 — CUSTOMIZATION OPTIONS UPDATE
+
+Homepage section updated:
+- Replaced the Logo & Decoration card image with an original studio image showing embroidery, flat printing and an embroidered patch, without third-party brand marks.
+- Kept the Custom Color and Labels & Packaging images.
+- Standardized the three card images to a consistent 1.7:1 aspect ratio, 8px image corner radius and 14px inset.
+- Preserved existing copy, links, site colors and responsive three-column/one-column behavior.
+
+Preview only. No deployment performed.

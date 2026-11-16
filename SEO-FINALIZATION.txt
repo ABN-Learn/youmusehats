@@ -1,0 +1,17 @@
+YOUMUSE SEO CONFIGURATION
+
+Confirmed production domain: https://youmusehats.com
+
+The site configuration uses the confirmed YOUMUSE domain.
+The SEO generator has been run successfully for this preview package:
+- sitemap.xml generated for 371 public HTML pages.
+- robots.txt generated with the sitemap URL.
+- Canonical URLs injected using https://youmusehats.com.
+
+Before launch:
+1. Review sitemap.xml and robots.txt.
+2. Confirm the production hosting serves both files from the site root.
+3. Submit https://youmusehats.com/sitemap.xml in Google Search Console and Bing Webmaster Tools.
+4. Recheck canonical URLs after deployment.
+
+Do not deploy until the final pages and domain routing have been verified.

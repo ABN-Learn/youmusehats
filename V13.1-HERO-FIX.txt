@@ -1,0 +1,11 @@
+YOUMUSE / Capvora Homepage Preview V13.1
+
+Fixes in this revision:
+- Fixed the hero image container so it occupies the full browser width.
+- Reset inherited absolute positioning and 72% width rules that caused the large blank area on the right.
+- Uses a wide AI-generated, full-colour product and embroidery-factory scene with no visible brand or machine logos.
+- Keeps the headline “Custom Hats for Your Brand”, black quote button, monochrome website UI, and six benefit statements.
+- Keeps the existing page structure and other site pages from V12.1/V13 preview.
+
+Preview only. No production website was changed or deployed.
+AI imagery is conceptual and must not be represented as actual factory photography.

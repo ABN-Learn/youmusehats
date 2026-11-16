@@ -1,0 +1,1 @@
+V22.1: Desktop hero uses the approved visual design image (cropped to exclude navigation and benefits). Transparent functional quote and hat-style click targets overlay the rendered buttons. Original mobile hero and remaining site content retained. No deployment.

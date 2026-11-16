@@ -1,0 +1,46 @@
+CAPVORA V12 STRUCTURE & NAVIGATION REVISION
+===========================================
+
+Built from the supplied V10 preview package. This is a local preview build only.
+
+STRUCTURE AUDIT
+- HTML pages in source package: 366
+- Hat-style category pages: 19 (all 19 expected category pages found)
+- Product detail templates: 304 (16 per hat category)
+- Blog article detail pages: 8
+- New blog category archive pages: 5
+- Main navigation: Home, About Us, Products, Customization, Manufacturing, Solutions, Blog, FAQ
+- Footer Explore links updated to the same eight primary navigation labels.
+
+NAVIGATION REPAIRS
+- Removed obsolete combined Products links: Baseball & Trucker; Beanies & Bucket Hats.
+- Removed duplicate Made with Heart link from Products dropdown.
+- Replaced stale Blog dropdown labels with actual article categories:
+  Hat Guides, Materials & Fabrics, Customization, Manufacturing & Quality, Industry Trends
+- Footer Explore column now matches the eight top-level header navigation labels.
+- WhatsApp and email contact links retained.
+
+BLOG ARCHIVES
+- Added independent archive pages:
+    - blog-categories/hat-guides.html
+  - blog-categories/materials-fabrics.html
+  - blog-categories/customization.html
+  - blog-categories/manufacturing-quality.html
+  - blog-categories/industry-trends.html
+- Existing eight article detail pages retained.
+
+SEO
+- Added a deployment-time SEO generator and robots.txt starter.
+- Canonical URLs and sitemap.xml are intentionally NOT finalized because the confirmed production domain was not supplied.
+- Before deployment, edit site-config.json and replace the placeholder with the exact confirmed HTTPS domain, then run generate-seo-files.py.
+- The current robots.txt contains a reminder comment, not a final sitemap URL.
+
+ADMIN
+- Included V11 admin prototype at admin-preview/index.html.
+- It is still a front-end prototype only. It is NOT connected to GitHub, a real CMS, or Cloudflare publishing.
+- Article/product/theme controls in that prototype do not write to the real site.
+
+IMPORTANT DEPLOYMENT LIMITATIONS
+- This package has not been deployed.
+- No live website, GitHub repository, DNS, or Cloudflare project was modified.
+- Before going live, confirm the production domain, connect the repository/build workflow, test forms and all mobile navigation, configure canonical URLs, and test a staging deployment.

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YOUMUSE CMS — V11 Admin Preview</title>
+<style>
+:root{--ink:#111;--muted:#68707b;--line:#e5e7eb;--soft:#f5f6f7;--orange:#f97316;--paper:#fff;--navy:#14213d}
+*{box-sizing:border-box}body{margin:0;background:#f4f5f6;color:var(--ink);font:14px/1.5 Inter,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}
+.shell{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+aside{background:#111;color:#fff;padding:22px 14px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 10px 24px;font-size:21px;font-weight:800}.brandmark{width:32px;height:32px;border-radius:9px;background:#fff;color:#111;display:grid;place-items:center}
+.group{margin:16px 8px 7px;color:#9ca3af;font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}
+.nav button{width:100%;background:transparent;color:#d1d5db;text-align:left;padding:10px 12px;border-radius:8px;margin:2px 0;display:flex;gap:10px;align-items:center}
+.nav button.active,.nav button:hover{background:#292929;color:#fff}.nav .ico{width:18px;text-align:center}
+.aside-note{margin:24px 7px 0;padding:12px;border:1px solid #393939;border-radius:10px;color:#bfc3ca;font-size:11px}
+main{min-width:0}.top{height:68px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}
+.top small{color:var(--muted)}.user{display:flex;align-items:center;gap:10px}.avatar{width:32px;height:32px;border-radius:50%;background:#eee;display:grid;place-items:center;font-weight:800}
+.content{max-width:1320px;margin:auto;padding:28px 30px 60px}.pagehead{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:22px}
+h1{font-size:26px;margin:0 0 4px;letter-spacing:-.5px}h2{font-size:16px;margin:0 0 14px}p.sub{margin:0;color:var(--muted)}
+.btn{padding:9px 14px;border-radius:8px;font-weight:700;background:#111;color:white}.btn.orange{background:var(--orange)}.btn.light{background:#fff;color:#111;border:1px solid var(--line)}.btn.small{padding:6px 10px;font-size:12px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:17px;box-shadow:0 2px 7px #11100006}.stat{font-size:27px;font-weight:800}.muted{color:var(--muted)}.tiny{font-size:11px}
+.two{grid-template-columns:1.15fr .85fr}.three{grid-template-columns:repeat(3,1fr)}
+.pill{display:inline-flex;align-items:center;padding:3px 8px;border-radius:20px;font-size:11px;background:#f1f2f3;color:#444}.pill.green{background:#e8f6ed;color:#16723a}.pill.amber{background:#fff3df;color:#8b5600}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid #edf0f2;vertical-align:middle}th{font-size:11px;color:#707782;font-weight:700}td{font-size:13px}
+input,select,textarea{width:100%;border:1px solid #d9dde2;border-radius:7px;padding:9px 10px;background:#fff;color:#111}textarea{min-height:100px;resize:vertical}
+.field{display:grid;gap:5px;margin:11px 0}.field label{font-size:12px;font-weight:700}.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.section{display:none}.section.active{display:block}
+.actions{display:flex;gap:6px;flex-wrap:wrap}.linkbtn{background:none;color:#333;text-decoration:underline;padding:4px 2px;font-size:12px}
+.notice{padding:12px 14px;border-radius:9px;background:#fff8e9;border:1px solid #f4dfb7;color:#75521b;margin:12px 0;font-size:12px}
+.ok{background:#effaf2;border-color:#cdebd5;color:#22663a}
+.preview{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:white}.previewbar{padding:9px 13px;background:#f7f7f7;border-bottom:1px solid var(--line);font-size:11px;color:#666}.previewhero{padding:25px;background:#fff;display:flex;justify-content:space-between;gap:15px;align-items:center}.previewhero h3{font-size:25px;line-height:1.05;margin:0 0 8px}.swatch{width:30px;height:30px;border-radius:7px;border:1px solid #ddd;display:inline-block;margin-right:6px}
+.toggle{appearance:none;width:36px;height:20px;background:#c7cbd1;border-radius:30px;position:relative;cursor:pointer;vertical-align:middle}.toggle:checked{background:#222}.toggle:before{content:"";position:absolute;width:14px;height:14px;left:3px;top:3px;border-radius:50%;background:#fff;transition:.15s}.toggle:checked:before{left:19px}
+.sectionrow{display:flex;align-items:center;justify-content:space-between;padding:12px;border:1px solid var(--line);border-radius:8px;margin:7px 0;background:white}
+.modal{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.modal.open{display:flex}.modalbox{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:14px;padding:22px}
+.mobilehint{display:none}
+@media(max-width:900px){.shell{grid-template-columns:1fr}aside{position:relative;height:auto;padding:10px}.brand{padding:5px 8px 10px}.nav{display:flex;overflow:auto;gap:4px}.group,.aside-note{display:none}.nav button{white-space:nowrap;width:auto}.top{position:relative}.stats{grid-template-columns:repeat(2,1fr)}.two,.three{grid-template-columns:1fr}.content{padding:20px 14px}.mobilehint{display:block}}
+@media(max-width:540px){.split{grid-template-columns:1fr}.top{padding:0 14px}.pagehead{flex-direction:column}.stats{gap:9px}.card{padding:13px}}
+</style>
+<style id="youmuse-v16-footer-contact">
+.youmuse-topbar{background:#f6f7f9;color:#102747;border-bottom:1px solid #e7ebf0;font-size:13px}
+.youmuse-topbar-inner{max-width:1420px;margin:0 auto;padding:8px 32px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.youmuse-topbar-inner>div{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.youmuse-topbar a{display:inline-flex;align-items:center;gap:7px;color:#102747;font-weight:700;text-decoration:none}
+.youmuse-topbar a:hover{color:#e87518}
+.youmuse-topbar svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.footer{background:#101114!important;color:#cbd0d8!important;padding:58px 0 22px!important}
+.footer .footgrid{display:grid!important;grid-template-columns:2.1fr 1fr 1.2fr 1.5fr!important;gap:42px!important}
+.footer .foot-brand{max-width:460px}
+.footer .foot-brand .foot-brand-name{display:inline-block;color:#fff;font-size:27px;font-weight:900;letter-spacing:-1px;text-decoration:none;margin:0 0 15px}
+.footer .foot-brand p{color:#cbd0d8;line-height:1.8;font-size:14px;margin:0}
+.footer h4{color:#fff!important;font-size:15px;margin:7px 0 17px}
+.footer .foot-links a,.footer .foot-contact a,.footer .foot-contact p{display:flex;align-items:flex-start;gap:10px;color:#cbd0d8;text-decoration:none;font-size:13px;line-height:1.7;margin:9px 0}
+.footer .foot-links a:hover,.footer .foot-contact a:hover{color:#ff9a35}
+.footer .foot-contact svg{width:17px;height:17px;flex:0 0 17px;margin-top:2px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.footer .foot-bottom{border-top:1px solid #343840;margin-top:36px;padding-top:19px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer .foot-bottom small{font-size:12px;color:#aeb5c0}
+.footer .social-links{display:flex;align-items:center;gap:10px}
+.footer .social-links a{width:38px;height:38px;border:1px solid #4a505a;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;margin:0}
+.footer .social-links a:hover{background:#ff8a24;border-color:#ff8a24;color:#101114}
+.footer .social-links svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.footer .social-links .filled svg{fill:currentColor;stroke:none}
+.footer .back-top{display:inline-flex!important;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #4a505a;border-radius:50%;color:#fff!important;margin:0!important}
+.footer .back-top svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:800px){.footer .footgrid{grid-template-columns:1fr 1fr!important;gap:28px!important}.footer .foot-brand{grid-column:1/-1}}
+@media(max-width:560px){.youmuse-topbar-inner{padding:9px 16px;align-items:flex-start;flex-direction:column;gap:8px}.youmuse-topbar-inner>div{gap:12px}.footer .footgrid{grid-template-columns:1fr!important}.footer .foot-brand{grid-column:auto}.footer .foot-bottom{align-items:flex-start}}
+</style>
+
+<style id="youmuse-v17-footer-refinement">
+.footer .back-top{
+  width:auto!important; min-width:58px!important; height:58px!important;
+  padding:0 18px!important; border-radius:32px!important;
+  display:inline-flex!important; flex-direction:row!important;
+  align-items:center!important; justify-content:center!important; gap:9px!important;
+  border:1.5px solid #8993a2!important; background:#171a20!important;
+  color:#fff!important; font-size:13px!important; font-weight:700!important;
+  line-height:1!important; text-decoration:none!important;
+}
+.footer .back-top svg{width:25px!important;height:25px!important;flex:0 0 25px!important;stroke-width:2.3!important}
+.footer .back-top span{display:inline!important;white-space:nowrap!important}
+.footer .back-top:hover{background:#ff8a24!important;border-color:#ff8a24!important;color:#101114!important}
+@media(max-width:560px){.footer .back-top{min-width:54px!important;height:54px!important;padding:0 15px!important}}
+</style>
+
+<style id="youmuse-v20-deep-blue-visual-system">
+:root{
+ --navy:#183B56!important;
+ --deep:#102B42!important;
+ --gold:#183B56!important;
+ --ink:#111111!important;
+ --muted:#526273!important;
+ --line:#AEBBC6!important;
+ --pale:#EAF0F4!important;
+ --youmuse-silver:#AEBBC6;
+ --youmuse-light:#EAF0F4;
+}
+html,body{background:#FFFFFF!important;color:#111111!important}
+h1,h2,h3,h4,h5,h6,.section h2,.pagehero h1{color:#111111}
+p{color:inherit}
+.head,.header,.site-header{background:#FFFFFF!important}
+.brand,.brandmark,.navlink:hover,.navlink.active,.textlink,.kicker{color:#183B56!important}
+.brandmark{background:#183B56!important;color:#FFFFFF!important}
+.navlink{color:#111111!important}
+.navlink:hover,.dropdown a:hover{color:#183B56!important}
+.dropdown{border-color:#AEBBC6!important}
+.dropdown a:hover,.mobiletoggle{background:#EAF0F4!important}
+.quote,.btn-primary,.primary-btn,.cta-button,.submit-btn,
+button.quote,a.quote,.heroactions .primary,.heroactions .btn-primary{
+ background:#183B56!important;color:#FFFFFF!important;border:1px solid #183B56!important;
+ box-shadow:none!important;border-radius:8px!important;
+}
+.quote:hover,.btn-primary:hover,.primary-btn:hover,.cta-button:hover,.submit-btn:hover{
+ background:#102B42!important;border-color:#102B42!important;color:#FFFFFF!important
+}
+.outline,.btn-secondary,.secondary-btn{
+ background:#FFFFFF!important;color:#183B56!important;border:1px solid #183B56!important;
+ border-radius:8px!important;box-shadow:none!important
+}
+.outline:hover,.btn-secondary:hover,.secondary-btn:hover{background:#EAF0F4!important;color:#183B56!important}
+.hero{
+ background-image:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.94) 35%,rgba(255,255,255,.10) 72%),url('assets/embedded/1b582a5308181933.webp')!important;background-position:center 42%!important;background-size:cover!important;
+ color:#111111!important;
+}
+.hero h1,.hero h2{color:#111111!important}
+.hero p{color:#526273!important}
+.hero .outline{color:#183B56!important;border-color:#183B56!important}
+.hero .eyebrow,.eyebrow{color:#183B56!important}
+.proof{color:#526273!important}
+.proof span:before,.bullets li:before{color:#183B56!important}
+.trust,.section.alt,.cardimg,.capvora-product-image{background:#EAF0F4!important}
+.trustitem{border-color:#AEBBC6!important}
+.kicker{color:#183B56!important}
+.card,.mini,.youmuse-industry-card,.youmuse-logo-compare-grid>div{
+ background:#FFFFFF!important;border-color:#AEBBC6!important;
+ box-shadow:0 5px 18px rgba(24,59,86,.06)!important
+}
+.card h3,.mini b,.youmuse-industry-card h3{color:#111111!important}
+.card p,.mini p,.sub{color:#526273!important}
+.textlink,.industry-link{color:#183B56!important}
+.number{color:#183B56!important}
+.cta,.pagehero,.footer{background:#183B56!important;color:#FFFFFF!important}
+.cta h2,.pagehero h1,.footer h2,.footer h3,.footer h4,.footer .brand{color:#FFFFFF!important}
+.cta p,.pagehero p,.footer p,.footer a{color:#EAF0F4!important}
+.footer a:hover{color:#FFFFFF!important}
+.footbottom,.footgrid{border-color:#AEBBC6!important}
+.back-top{border-color:#AEBBC6!important;color:#FFFFFF!important}
+.social-links a,.social-links button{border-color:#AEBBC6!important;color:#FFFFFF!important}
+input,select,textarea{border-color:#AEBBC6!important}
+input:focus,select:focus,textarea:focus{outline-color:#183B56!important;border-color:#183B56!important}
+hr,.divider{border-color:#AEBBC6!important}
+@media(max-width:850px){
+ .headin{min-height:68px!important;height:auto!important}
+ .nav{max-width:100%}
+ .footgrid,.footer .footgrid{grid-template-columns:1fr 1fr!important;gap:26px!important}
+}
+@media(max-width:560px){
+ .container{padding-left:18px!important;padding-right:18px!important}
+ .section{padding-top:52px!important;padding-bottom:52px!important}
+ .footgrid,.footer .footgrid{grid-template-columns:1fr!important;gap:20px!important}
+ .hero{min-height:480px!important;background-position:center!important}
+ .heroactions{gap:10px!important}
+ .heroactions a,.quote,.btn-primary,.primary-btn,.cta-button,.submit-btn{max-width:100%;white-space:normal}
+}
+</style>
+
+<style id="youmuse-v20-1-visible-blue-refresh">
+:root{--gold:#183B56!important;--navy:#183B56!important;--deep:#102B42!important;--ink:#111111!important;--muted:#526273!important;--line:#AEBBC6!important;--pale:#EAF0F4!important}
+.youmuse-topbar{background:#EAF0F4!important;color:#183B56!important;border-bottom:1px solid #AEBBC6!important}
+.youmuse-topbar a,.youmuse-topbar strong{color:#183B56!important}
+.brand,.brandmark{color:#183B56!important}.brandmark{background:#183B56!important;color:#FFFFFF!important}
+.navlink:hover,.navlink.active,.chev,.kicker,.eyebrow,.textlink{color:#183B56!important}
+.dropdown{border-color:#AEBBC6!important}.dropdown a:hover{background:#EAF0F4!important;color:#183B56!important}
+.quote,.cap-21-cta,.capvora-float-link,.capvora-read-more,.page-button,
+a[class*="quote"],button[class*="quote"],a[class*="cta"],button[class*="cta"],
+input[type="submit"],button[type="submit"]{background:#183B56!important;color:#FFFFFF!important;border-color:#183B56!important;box-shadow:none!important}
+.quote:hover,.cap-21-cta:hover,.capvora-float-link:hover,.page-button:hover,
+a[class*="quote"]:hover,a[class*="cta"]:hover,button[type="submit"]:hover,input[type="submit"]:hover{background:#102B42!important;color:#FFFFFF!important;border-color:#102B42!important}
+.outline,.btn-secondary,.secondary-btn,a.secondary{background:#FFFFFF!important;color:#183B56!important;border:1px solid #183B56!important}
+.trust,.section.alt,.inner-hero,.capvora-filter-block,.journal-filter{background:#EAF0F4!important}
+.card,.cap-21-card,.capvora-product-card,.journal-card,.directory-card,.mini,.youmuse-industry-card,.youmuse-logo-compare-grid>div{border-color:#AEBBC6!important;box-shadow:0 6px 20px rgba(24,59,86,.09)!important}
+.cardimg,.capvora-product-image,.journal-thumb{background:#EAF0F4!important}
+.card h3,.capvora-product-name,.journal-card h2,.journal-card h3{color:#111111!important}
+.card p,.sub,.journal-card p,.capvora-product-meta{color:#526273!important}
+.number,.step-number,.bullets li:before{color:#183B56!important}
+.cta,.footer,.pagehero{background:#183B56!important;color:#FFFFFF!important}
+.footer h1,.footer h2,.footer h3,.footer h4,.footer .brand,.cta h2,.pagehero h1{color:#FFFFFF!important}
+.footer p,.footer a,.foot-links a,.foot-contact a,.foot-contact p,.cta p,.pagehero p{color:#EAF0F4!important}
+.footer a:hover{color:#FFFFFF!important}.footbottom{border-top-color:#AEBBC6!important}
+.social-links a,.social-links button{border-color:#AEBBC6!important;color:#FFFFFF!important}
+input,select,textarea{border-color:#AEBBC6!important}
+input:focus,select:focus,textarea:focus{border-color:#183B56!important;outline-color:#183B56!important}
+hr{border-color:#AEBBC6!important}
+@media(max-width:850px){.footgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important}}
+@media(max-width:560px){.footgrid{grid-template-columns:1fr!important;gap:18px!important}}
+</style>
+</head>
+<body id="top">
+<div class="shell">
+<aside>
+ <div class="brand"><span class="brandmark">C</span> YOUMUSE <span style="font-size:10px;color:#aaa;font-weight:500">V11</span></div>
+ <div class="group">Overview</div><nav class="nav">
+ <button class="active" data-page="dashboard"><span class="ico">▦</span>控制台</button>
+ </nav>
+ <div class="group">Content management</div><nav class="nav">
+ <button data-page="articles"><span class="ico">▤</span>文章管理</button>
+ <button data-page="products"><span class="ico">▣</span>产品管理</button>
+ <button data-page="categories"><span class="ico">▦</span>分类管理</button>
+ <button data-page="media"><span class="ico">▧</span>媒体库</button>
+ <button data-page="seo"><span class="ico">⌕</span>SEO 设置</button>
+ </nav>
+ <div class="group">Website design</div><nav class="nav">
+ <button data-page="theme"><span class="ico">◐</span>主题设置</button>
+ <button data-page="builder"><span class="ico">▥</span>页面板块</button>
+ <button data-page="navigation"><span class="ico">☷</span>页眉与页脚</button>
+ </nav>
+ <div class="group">Publishing</div><nav class="nav">
+ <button data-page="publish"><span class="ico">↗</span>预览与发布</button>
+ <button data-page="work"><span class="ico">✦</span>ChatGPT Work 协作</button>
+ </nav>
+ <div class="aside-note">演示后台 · 当前仅在本地浏览器预览。尚未连接 GitHub、CMS 或正式网站。</div>
+</aside>
+<main>
+ <div class="youmuse-topbar"><div class="youmuse-topbar-inner"><strong>Custom Headwear Manufacturer</strong><div><a href="tel:+8618316659831"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg><span>+86 183 1665 9831</span></a><a href="mailto:info@youmusehats.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>info@youmusehats.com</span></a><a href="https://wa.me/8618316659831" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.8.6-1-.1-2.3-.7-3.8-2.1-1.4-1.3-2.2-2.8-2.4-3.7-.2-.7 0-1.3.4-1.8Z"/></svg><span>+86 183 1665 9831</span></a></div></div></div><header class="top"><div><strong>网站管理后台</strong> <small> / YOUMUSE</small></div><div class="user"><span class="pill amber">预览模式</span><div class="avatar">C</div><span>管理员</span></div></header>
+ <div class="content">
+  <section class="section active" id="dashboard">
+   <div class="pagehead"><div><h1>欢迎回来</h1><p class="sub">管理 YOUMUSE 的文章、产品和网站设计。</p></div><button class="btn" onclick="go('publish')">查看发布流程 ↗</button></div>
+   <div class="grid stats">
+    <div class="card"><div class="muted tiny">帽型分类</div><div class="stat">19</div><span class="pill green">已建立页面模板</span></div>
+    <div class="card"><div class="muted tiny">产品详情模板</div><div class="stat">304</div><span class="pill">待填真实产品内容</span></div>
+    <div class="card"><div class="muted tiny">现有博客文章</div><div class="stat">8</div><span class="pill amber">示例数据</span></div>
+    <div class="card"><div class="muted tiny">待发布草稿</div><div class="stat" id="draftCount">2</div><span class="pill">本地演示</span></div>
+   </div>
+   <div class="grid two">
+    <div class="card"><h2>快速操作</h2><div class="row"><button class="btn" onclick="newArticle()">＋ 新建文章</button><button class="btn light" onclick="go('products')">管理产品</button><button class="btn light" onclick="go('theme')">编辑主题</button></div><div class="notice">你可以在这个预览后台体验页面交互。保存只影响本地演示数据，不会修改线上网站。</div><h2 style="margin-top:20px">建议工作流程</h2><p class="muted">新增内容 → 填写 SEO → 保存草稿 → 预览 → 确认发布 → 自动构建部署（正式接入后启用）。</p></div>
+    <div class="card"><h2>网站结构概览</h2><table><tr><td>产品分类</td><td>19 个帽型</td><td><span class="pill green">模板已建</span></td></tr><tr><td>产品详情</td><td>304 个模板</td><td><span class="pill amber">待填充</span></td></tr><tr><td>博客文章</td><td>8 篇示例</td><td><span class="pill">可扩展</span></td></tr><tr><td>页眉 / 页脚</td><td>统一管理</td><td><span class="pill">待接入</span></td></tr></table></div>
+   </div>
+  </section>
+  <section class="section" id="articles">
+   <div class="pagehead"><div><h1>文章管理</h1><p class="sub">创建、编辑、分类和管理博客文章。</p></div><button class="btn orange" onclick="newArticle()">＋ 新增文章</button></div>
+   <div class="card"><div class="row" style="justify-content:space-between;margin-bottom:12px"><input id="articleSearch" style="max-width:280px" placeholder="搜索文章标题…" oninput="renderArticles()"><select style="max-width:180px" id="articleFilter" onchange="renderArticles()"><option value="all">全部状态</option><option>已发布</option><option>草稿</option></select></div>
+    <div style="overflow:auto"><table><thead><tr><th>文章标题</th><th>分类</th><th>状态</th><th>更新时间</th><th>操作</th></tr></thead><tbody id="articleRows"></tbody></table></div>
+   </div>
+   <div class="notice">文章管理后台正式接入后可支持 Markdown / 富文本编辑、图片上传、草稿、发布、撤回和删除。</div>
+  </section>
+  <section class="section" id="products">
+   <div class="pagehead"><div><h1>产品管理</h1><p class="sub">管理 19 种帽型、每类产品目录和独立详情。</p></div><button class="btn orange" onclick="alert('演示：正式后台将打开新增产品表单。')">＋ 新增产品</button></div>
+   <div class="grid three">
+    <div class="card"><div class="muted tiny">产品类别</div><div class="stat">19</div><p class="muted">Baseball Caps、Trucker Hats 等</p><button class="btn light small" onclick="go('categories')">管理分类</button></div>
+    <div class="card"><div class="muted tiny">每类产品模板</div><div class="stat">16</div><p class="muted">产品图片、名称、描述、Read More</p></div>
+    <div class="card"><div class="muted tiny">详情页模板总数</div><div class="stat">304</div><p class="muted">每个产品对应独立详情页</p></div>
+   </div>
+   <div class="card" style="margin-top:16px"><h2>产品内容字段</h2><div class="split"><div><div class="field"><label>产品名称</label><input placeholder="Custom Embroidered Baseball Cap"></div><div class="field"><label>所属帽型</label><select><option>Baseball Caps</option><option>Trucker Hats</option><option>Flat Brim Caps</option></select></div><div class="field"><label>材料 / 面料</label><input placeholder="Cotton twill"></div></div><div><div class="field"><label>Logo 工艺</label><input placeholder="Embroidery / 3D embroidery"></div><div class="field"><label>颜色</label><input placeholder="Black, navy, custom colors"></div><div class="field"><label>产品图片</label><input type="file" accept="image/*"></div></div></div><div class="field"><label>产品简介</label><textarea placeholder="填写真实产品特点、用途和定制选项…"></textarea></div><button class="btn" onclick="alert('演示表单：尚未连接真实内容数据库。')">保存产品（演示）</button></div>
+  </section>
+  <section class="section" id="categories">
+   <div class="pagehead"><div><h1>分类管理</h1><p class="sub">管理一级、二级和三级分类，可持续扩展。</p></div><button class="btn orange" onclick="alert('演示：正式后台将允许新增分类并自动生成分类页。')">＋ 新增分类</button></div>
+   <div class="card"><h2>Products → Hat Styles → Product</h2><div class="notice">当前 19 个帽型是二级分类；帽型内的产品列表是下一级；每个产品再链接独立详情页。</div><table><thead><tr><th>二级分类</th><th>产品数量模板</th><th>分类页面</th><th>状态</th></tr></thead><tbody id="categoryRows"></tbody></table></div>
+  </section>
+  <section class="section" id="media">
+   <div class="pagehead"><div><h1>媒体库</h1><p class="sub">集中管理产品图、文章插图、Banner 和工厂视频。</p></div><button class="btn orange" onclick="document.getElementById('mediaUpload').click()">＋ 上传图片</button></div>
+   <div class="card"><input id="mediaUpload" type="file" accept="image/*" multiple style="display:none" onchange="showFiles(this)"><div id="mediaList" class="grid three"><div class="card"><strong>Homepage Hero</strong><p class="muted tiny">首页主视觉 · 现有素材</p></div><div class="card"><strong>Hat Product Images</strong><p class="muted tiny">产品图片 · 待替换为真实图片</p></div><div class="card"><strong>Logo Craft Images</strong><p class="muted tiny">刺绣、印刷、贴片和织标</p></div></div><p class="muted tiny" id="uploadStatus">本地选择文件仅用于演示，不会上传到服务器。</p></div>
+  </section>
+  <section class="section" id="seo">
+   <div class="pagehead"><div><h1>SEO 设置</h1><p class="sub">为文章、产品、分类和静态页面设置搜索信息。</p></div></div>
+   <div class="card"><div class="field"><label>选择页面</label><select><option>首页</option><option>All Hat Styles</option><option>Baseball Caps</option><option>Blog Article</option><option>Product Detail</option></select></div><div class="field"><label>SEO Title</label><input value="YOUMUSE | Custom Hat Manufacturer & OEM/ODM"></div><div class="field"><label>Meta Description</label><textarea>Custom hats for brands, businesses and teams. Explore flexible OEM/ODM headwear customization, samples and manufacturing services from YOUMUSE.</textarea></div><div class="split"><div class="field"><label>Focus Keyword</label><input placeholder="custom hat manufacturer"></div><div class="field"><label>Canonical URL</label><input placeholder="https://www.example.com/page/"></div></div><div class="field"><label>Social Sharing Image</label><input type="file" accept="image/*"></div><div class="notice">正式接入后可自动生成 sitemap.xml、robots.txt、Canonical、Open Graph 和适用的 JSON-LD。关键词填写本身不保证搜索排名。</div><button class="btn" onclick="alert('SEO 字段演示：未写入正式网站。')">保存 SEO（演示）</button></div>
+  </section>
+  <section class="section" id="theme">
+   <div class="pagehead"><div><h1>主题设置</h1><p class="sub">调整品牌色彩、字体、按钮和页面视觉。</p></div><button class="btn light" onclick="resetTheme()">恢复 YOUMUSE 默认主题</button></div>
+   <div class="grid two"><div class="card"><h2>品牌颜色</h2><div class="field"><label>主色（黑色）</label><input type="color" id="primaryColor" value="#111111" oninput="updateTheme()"></div><div class="field"><label>背景色（白色）</label><input type="color" id="backgroundColor" value="#ffffff" oninput="updateTheme()"></div><div class="field"><label>辅助灰色</label><input type="color" id="grayColor" value="#777777" oninput="updateTheme()"></div><div class="field"><label>品牌橙色</label><input type="color" id="accentColor" value="#f97316" oninput="updateTheme()"></div><div class="field"><label>字体</label><select><option>Inter / Arial</option><option>System UI</option><option>Georgia</option></select></div><button class="btn" onclick="alert('演示主题设置已在右侧预览；尚未保存到网站。')">保存主题（演示）</button></div><div class="preview" id="themePreview"><div class="previewbar">实时样式预览 · Preview</div><div class="previewhero"><div><div style="font-size:10px;letter-spacing:2px;color:var(--orange)">YOUMUSE / CUSTOM HEADWEAR</div><h3>Custom Hats<br>for Your Brand</h3><p class="muted">Premium custom headwear for your brand.</p><button class="btn" id="previewQuote">Request a Quote ↗</button></div><div style="font-size:58px">🧢</div></div></div></div>
+   <div class="notice">主题预览只在此演示页面生效。正式版将采用安全的主题变量，不直接改动产品和文章内容。</div>
+  </section>
+  <section class="section" id="builder">
+   <div class="pagehead"><div><h1>页面板块</h1><p class="sub">控制首页区块显示、隐藏和顺序。</p></div><button class="btn orange" onclick="alert('正式版将从预设板块库添加新板块。')">＋ 添加板块</button></div>
+   <div class="card"><h2>首页板块顺序</h2><div id="sectionList"></div><div class="notice">此处的开关与排序只用于后台交互演示；正式版可将设置保存为页面配置。</div></div>
+  </section>
+  <section class="section" id="navigation">
+   <div class="pagehead"><div><h1>页眉与页脚</h1><p class="sub">统一管理主导航、下拉菜单和页脚链接。</p></div><button class="btn" onclick="alert('演示：导航设置尚未连接真实站点。')">保存导航（演示）</button></div>
+   <div class="grid two"><div class="card"><h2>页眉一级导航</h2><div id="headerLinks"></div><button class="btn light small" onclick="addNav()">＋ 添加导航项</button></div><div class="card"><h2>页脚一级导航</h2><div id="footerLinks"></div><label class="row" style="margin-top:14px"><input type="checkbox" id="syncFooter" checked style="width:auto" onchange="syncFoot()"> 页脚与页眉一级导航保持一致</label><div class="notice">建议保持一级导航一致，页脚可以额外展示常用二级链接和联系方式。</div></div></div>
+  </section>
+  <section class="section" id="publish">
+   <div class="pagehead"><div><h1>预览与发布</h1><p class="sub">正式接入后，内容保存、预览、发布和部署在这里完成。</p></div></div>
+   <div class="grid two"><div class="card"><h2>发布步骤</h2><ol><li>保存文章、产品或页面设置。</li><li>生成本地预览或预览链接。</li><li>检查桌面和手机显示。</li><li>确认后提交到 GitHub。</li><li>Cloudflare Pages 自动构建和部署。</li></ol><span class="pill amber">目前未连接真实发布服务</span></div><div class="card"><h2>当前预览状态</h2><p><span class="pill green">本地演示运行中</span></p><p class="muted">此 V11 预览不会连接正式网站，不会修改 GitHub 仓库或 Cloudflare 部署。</p><button class="btn light" onclick="alert('已确认：本次没有对正式网站执行发布。')">检查预览状态</button></div></div>
+  </section>
+  <section class="section" id="work">
+   <div class="pagehead"><div><h1>ChatGPT Work 协作</h1><p class="sub">后台管理与 Work 双通道：你可以自己操作，也可以委托 Work。</p></div><span class="pill green">双方式方案</span></div>
+   <div class="grid two"><div class="card"><h2>你可以交给 Work 的任务</h2><ul><li>撰写 SEO 文章并保存草稿</li><li>编辑旧文章、替换图片</li><li>新增产品及帽型分类</li><li>调整主题、首页板块和导航</li><li>检查内部链接、Sitemap 和 SEO</li><li>生成预览并在你确认后发布</li></ul></div><div class="card"><h2>建议的 Work 操作权限</h2><p>日常写作：允许新增和编辑草稿。</p><p>产品与图片：先预览再确认。</p><p>主题和导航：修改前备份，预览后确认。</p><p>正式发布：需要你明确批准。</p><div class="notice">Work 能否直接执行这些操作，取决于后续 GitHub / CMS 连接、仓库权限和发布流程配置。当前只是协作方案预览。</div></div></div>
+  </section>
+ </div>
+</main></div>
+<div class="modal" id="articleModal"><div class="modalbox"><div class="row" style="justify-content:space-between"><h2 id="modalTitle">新增文章</h2><button class="btn light small" onclick="closeModal()">关闭</button></div><div class="field"><label>文章标题</label><input id="aTitle" placeholder="Enter article title"></div><div class="split"><div class="field"><label>分类</label><select id="aCategory"><option>Hat Guides</option><option>Materials & Fabrics</option><option>Customization</option><option>Manufacturing & Quality</option><option>Industry Trends</option></select></div><div class="field"><label>状态</label><select id="aStatus"><option>草稿</option><option>已发布</option></select></div></div><div class="field"><label>文章内容（演示）</label><textarea id="aBody" placeholder="在这里撰写文章内容…"></textarea></div><h2>SEO 设置</h2><div class="field"><label>SEO Title</label><input id="aSeo" placeholder="Search result title"></div><div class="field"><label>Meta Description</label><textarea id="aDesc" placeholder="Write a concise search description…"></textarea></div><div class="row" style="justify-content:flex-end"><button class="btn light" onclick="closeModal()">取消</button><button class="btn" onclick="saveArticle()">保存（本地演示）</button></div></div></div>
+<script>
+const pages=['Home','About Us','Products','Customization','Manufacturing','Solutions','Blog','FAQ'];
+const hats=['Baseball Caps','Trucker Hats','Flat Brim Caps','Dad Hats','Bucket Hats','Rope Hats','Five Panel Hats','Performance Hats','Beanies','Golf Caps','Straw Hats','Fedora Hats','Newsboy Caps','Berets','Cowboy Hats','Wide Brim Sun Hats','Artist Caps','Visor Hats','Legionnaire Hats'];
+let articles=[
+{title:'How to Choose the Right Custom Baseball Cap',cat:'Hat Guides',status:'已发布',date:'2026-11-12'},
+{title:'A Guide to Cotton Twill for Custom Headwear',cat:'Materials & Fabrics',status:'已发布',date:'2026-11-10'},
+{title:'Embroidery vs. Woven Labels',cat:'Customization',status:'草稿',date:'2026-11-09'},
+{title:'Understanding Custom Hat Sampling',cat:'Hat Guides',status:'草稿',date:'2026-11-08'}
+];let editing=-1;
+function go(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));let names={dashboard:'控制台',articles:'文章管理',products:'产品管理',categories:'分类管理',media:'媒体库',seo:'SEO 设置',theme:'主题设置',builder:'页面板块',navigation:'页眉与页脚',publish:'预览与发布',work:'ChatGPT Work 协作'};document.querySelector('.top strong').textContent=names[id]||'网站管理后台';if(id==='articles')renderArticles();if(id==='categories')renderCategories();if(id==='builder')renderSections();if(id==='navigation')renderNav();}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function renderArticles(){let q=(document.getElementById('articleSearch')?.value||'').toLowerCase(),f=document.getElementById('articleFilter')?.value||'all';document.getElementById('articleRows').innerHTML=articles.map((a,i)=>({...a,i})).filter(a=>(a.title.toLowerCase().includes(q))&&(f==='all'||a.status===f)).map(a=>`<tr><td><strong>${esc(a.title)}</strong></td><td>${esc(a.cat)}</td><td><span class="pill ${a.status==='已发布'?'green':'amber'}">${a.status}</span></td><td>${a.date}</td><td><div class="actions"><button class="linkbtn" onclick="editArticle(${a.i})">编辑</button><button class="linkbtn" onclick="deleteArticle(${a.i})">删除</button></div></td></tr>`).join('')||'<tr><td colspan="5">没有找到文章</td></tr>';document.getElementById('draftCount').textContent=articles.filter(a=>a.status==='草稿').length}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function newArticle(){editing=-1;document.getElementById('modalTitle').textContent='新增文章';['aTitle','aBody','aSeo','aDesc'].forEach(id=>document.getElementById(id).value='');document.getElementById('aStatus').value='草稿';document.getElementById('articleModal').classList.add('open')}
+function editArticle(i){editing=i;let a=articles[i];document.getElementById('modalTitle').textContent='编辑文章';document.getElementById('aTitle').value=a.title;document.getElementById('aCategory').value=a.cat;document.getElementById('aStatus').value=a.status;document.getElementById('aBody').value=a.body||'';document.getElementById('aSeo').value=a.seo||a.title;document.getElementById('aDesc').value=a.desc||'';document.getElementById('articleModal').classList.add('open')}
+function saveArticle(){let title=document.getElementById('aTitle').value.trim();if(!title){alert('请先填写文章标题');return}let a={title,cat:document.getElementById('aCategory').value,status:document.getElementById('aStatus').value,date:new Date().toISOString().slice(0,10),body:document.getElementById('aBody').value,seo:document.getElementById('aSeo').value,desc:document.getElementById('aDesc').value};if(editing<0)articles.unshift(a);else articles[editing]=a;closeModal();renderArticles();alert('已保存到本地演示数据。正式网站尚未更改。')}
+function deleteArticle(i){if(confirm('从本地演示列表删除这篇文章？')){articles.splice(i,1);renderArticles()}}
+function closeModal(){document.getElementById('articleModal').classList.remove('open')}
+function renderCategories(){document.getElementById('categoryRows').innerHTML=hats.map(h=>`<tr><td>${h}</td><td>16 个产品位</td><td><span class="pill green">独立模板</span></td><td><span class="pill amber">待填真实产品</span></td></tr>`).join('')}
+function showFiles(el){document.getElementById('uploadStatus').textContent=[...el.files].map(f=>f.name).join('、')+'（仅本地选择，未上传）'}
+function updateTheme(){let p=document.getElementById('primaryColor').value,b=document.getElementById('backgroundColor').value,a=document.getElementById('accentColor').value;document.getElementById('themePreview').style.background=b;document.getElementById('themePreview').style.color=p;document.getElementById('previewQuote').style.background=p;document.getElementById('previewQuote').style.color='#fff';document.getElementById('themePreview').style.setProperty('--orange',a)}
+function resetTheme(){document.getElementById('primaryColor').value='#111111';document.getElementById('backgroundColor').value='#ffffff';document.getElementById('grayColor').value='#777777';document.getElementById('accentColor').value='#f97316';updateTheme()}
+let sections=['Hero Banner','Hat Styles Carousel','Why Choose YOUMUSE','Logo Decoration','Manufacturing Overview','Factory Video','Latest Blog','FAQ'];
+function renderSections(){document.getElementById('sectionList').innerHTML=sections.map((s,i)=>`<div class="sectionrow"><div><strong>${s}</strong><div class="tiny muted">首页区块 ${i+1}</div></div><div class="row"><input class="toggle" type="checkbox" checked onchange="this.parentElement.parentElement.style.opacity=this.checked?'1':'.45'"><button class="btn light small" onclick="moveSection(${i},-1)">↑</button><button class="btn light small" onclick="moveSection(${i},1)">↓</button></div></div>`).join('')}
+function moveSection(i,d){let j=i+d;if(j<0||j>=sections.length)return;[sections[i],sections[j]]=[sections[j],sections[i]];renderSections()}
+let navItems=[...pages];
+function renderNav(){document.getElementById('headerLinks').innerHTML=navItems.map((n,i)=>`<div class="sectionrow"><span>${n}</span><button class="linkbtn" onclick="renameNav(${i})">编辑名称</button></div>`).join('');document.getElementById('footerLinks').innerHTML=navItems.map(n=>`<div class="tiny" style="padding:5px 0">• ${n}</div>`).join('')}
+function renameNav(i){let n=prompt('修改导航名称',navItems[i]);if(n){navItems[i]=n;renderNav()}}
+function addNav(){let n=prompt('新增导航名称');if(n){navItems.push(n);renderNav()}}
+function syncFoot(){renderNav()}
+renderArticles();renderCategories();updateTheme();
+</script><footer class="footer"><div class="container">
+<div class="footgrid">
+  <div class="foot-brand"><a class="foot-brand-name" href="../index.html">YOUMUSE</a>
+    <p>YOUMUSE | Custom Headwear Manufacturer<br><br>With over 20 years of manufacturing experience, YOUMUSE specializes in custom hats and headwear for global brands, businesses, and teams. We provide professional OEM/ODM manufacturing, private label, and custom branding solutions.</p>
+  </div>
+  <div class="foot-links"><h4>Explore</h4><a href="../index.html">Home</a><a href="../about.html">About Us</a><a href="../products.html">Products</a><a href="../customization.html">Customization</a><a href="../manufacturing.html">Manufacturing</a><a href="../solutions.html">Solutions</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a></div>
+  <div class="foot-links"><h4>Our Services</h4><a href="../all-hat-styles.html">All Hat Styles</a><a href="../design-support.html">Design Support</a><a href="../custom-labeling.html">Custom Labeling</a><a href="../production-overview.html">Production Overview</a><a href="../quality-control.html">Quality Control</a><a href="../order-process.html">Order Process</a><a href="../private-label.html">Private Label Brands</a><a href="../corporate-promotional.html">Corporate &amp; Promotional</a></div>
+  <div class="foot-contact"><h4>Contact Us</h4>
+    
+    <a href="tel:+8618316659831"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg><span>+86 183 1665 9831</span></a>
+    <a href="mailto:info@youmusehats.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>info@youmusehats.com</span></a>
+    <a href="https://wa.me/8618316659831" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.8.6-1-.1-2.3-.7-3.8-2.1-1.4-1.3-2.2-2.8-2.4-3.7-.2-.7 0-1.3.4-1.8Z"/></svg><span>+86 183 1665 9831</span></a>
+    <p><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-6.1 8-13a8 8 0 1 0-16 0c0 6.9 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Baiyun District, Guangzhou, China</span></p>
+    <div class="social-links" aria-label="Social links">
+      <a class="filled" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></a>
+      <a href="mailto:info@youmusehats.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+      <a href="https://wa.me/8618316659831" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.2c.3-.6.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-1.8.6-1-.1-2.3-.7-3.8-2.1-1.4-1.3-2.2-2.8-2.4-3.7-.2-.7 0-1.3.4-1.8Z"/></svg></a>
+    </div>
+  </div>
+</div>
+<div class="foot-bottom"><small>© 2026 YOUMUSE. All Rights Reserved.</small>
+  <a class="back-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg><span>Back to Top</span></a>
+</div></div></footer></body></html>

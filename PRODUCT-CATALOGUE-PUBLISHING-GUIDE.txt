@@ -1,0 +1,41 @@
+YOUMUSE PRODUCT CATALOGUE — PUBLISHING GUIDE
+
+CURRENT DISPLAY
+- All 19 hat category pages use one shared dynamic catalogue script.
+- No fake or blank product cards are shown. Empty categories show a short empty-state message.
+- Desktop: 4 columns x up to 4 rows (16 products per page).
+- Tablet: 2 columns. Mobile: 2 columns.
+- Pagination appears only when a category has more than 16 published products.
+- Search and filters operate on the published products in the selected category.
+
+HOW TO PUBLISH A PRODUCT ON THIS STATIC WEBSITE
+1. Add the product image under v13work/assets/products/ (WebP recommended).
+2. Open v13work/data/products.json.
+3. Add one product object to the array for its category.
+4. Set status to "published" to make it visible. Use "draft" to keep it hidden.
+5. Run: python scripts/build-product-catalogue.py
+6. Upload/commit the changed JSON, generated product pages, sitemap.xml and image files with the website.
+
+PRODUCT RECORD FIELDS
+{
+  "slug": "navy-cotton-baseball-cap",
+  "status": "published",
+  "name": "Navy Cotton Baseball Cap",
+  "description": "Structured six-panel cotton cap with custom logo options.",
+  "image": "assets/products/navy-cotton-baseball-cap.webp",
+  "gallery": ["assets/products/navy-cotton-baseball-cap-back.webp"],
+  "techniques": ["Embroidery", "Patches"],
+  "materials": ["Cotton"],
+  "applications": ["Corporate", "Promotional"],
+  "customization": "Custom colors, closures and logo placement available."
+}
+
+CATEGORY KEYS (exact spelling)
+artist-caps, baseball-caps, beanies, berets, bucket-hats, cowboy-hats, dad-hats, fedora-hats, five-panel-hats, flat-brim-caps, golf-caps, legionnaire-hats, newsboy-caps, performance-hats, rope-hats, straw-hats, trucker-hats, visor-hats, wide-brim-sun-hats
+
+IMPORTANT
+- Product image paths in products.json are relative to the website root (v13work/).
+- Every product slug must be unique within its category.
+- Only records with status "published", a slug and a name are displayed.
+- Each category is independent; products are never mixed between categories.
+- This is a static-site publishing workflow, not a login-based product CMS. Products are published by updating products.json and image files, then running scripts/build-product-catalogue.py. The script generates SEO-friendly static product detail pages and updates sitemap.xml automatically.

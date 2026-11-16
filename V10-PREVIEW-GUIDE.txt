@@ -1,0 +1,29 @@
+CAPVORA V10 PREVIEW — HOW TO OPEN
+
+1. Download and extract Capvora-V10-Homepage-and-Product-Catalogue-Preview.zip.
+2. Open index.html in Chrome, Edge, or another modern browser to preview the homepage.
+3. On the homepage, find "Explore Our Hat Styles":
+   - Desktop: 5 cards visible at a time; 10 cards total across 2 slides.
+   - Mobile: 2 cards visible at a time; swipe horizontally or use the arrows.
+   - Both arrows and cards retain their complete borders; no autoplay.
+4. Click "Explore More Hat Styles" to open all-hat-styles.html:
+   - All 19 current hat categories are displayed in a responsive 4/3/2-column grid.
+   - Use the search box to find a hat category.
+   - The grid is not limited to 19; additional category cards can be added later.
+5. Click a category (for example Baseball Caps):
+   - Each category page contains 16 products of that same hat type.
+   - Craft/logo technique, materials, color, and application filters remain in place.
+6. Click "Read More" under a product to open its individual detail page.
+
+WHAT CHANGED IN V10
+- Homepage carousel changed from 8 cards / 4 visible on desktop to 10 cards / 5 visible on desktop.
+- The carousel calculates card widths from the available viewport width to keep every card border fully visible.
+- Mobile shows 2 cards per slide and supports native touch swipe.
+- All Hat Styles page was simplified: redundant information panels and factory-tour block removed.
+- All Hat Styles now has a compact heading, category search, and all 19 category cards.
+- Existing black/white/gray theme, orange accents, black quote button, site navigation and contact links retained.
+- Existing 19 category pages and 304 product detail templates retained unchanged.
+- Each category still has 16 same-type product slots and its existing filters.
+- No new hat images were generated; existing approved site images were reused.
+
+This is a local preview package only. It has not been deployed to the live domain.

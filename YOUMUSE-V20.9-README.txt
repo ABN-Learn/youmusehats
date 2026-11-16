@@ -1,0 +1,3 @@
+YOUMUSE v20.9 homepage hero redesign.
+Responsive, prominent three-cap arrangement with factory photo on right; original content and other pages retained.
+Open v13work/index.html. Preview only.

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "pageSize": 16,
+  "categories": {
+    "artist-caps": [],
+    "baseball-caps": [],
+    "beanies": [],
+    "berets": [],
+    "bucket-hats": [],
+    "cowboy-hats": [],
+    "dad-hats": [],
+    "fedora-hats": [],
+    "five-panel-hats": [],
+    "flat-brim-caps": [],
+    "golf-caps": [],
+    "legionnaire-hats": [],
+    "newsboy-caps": [],
+    "performance-hats": [],
+    "rope-hats": [],
+    "straw-hats": [],
+    "trucker-hats": [],
+    "visor-hats": [],
+    "wide-brim-sun-hats": []
+  }
+}

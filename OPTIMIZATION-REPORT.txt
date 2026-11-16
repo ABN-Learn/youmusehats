@@ -1,0 +1,57 @@
+CAPVORA WEBSITE OPTIMIZATION — PREVIEW BUILD
+
+Completed in this package
+1. Kept the existing Capvora visual theme, approved logo, navigation structure and quote modal.
+2. Kept 19 hat styles in the full catalogue; the homepage still contains the existing 19 cards with the first 9 featured and a More Styles link to all-hat-styles.html.
+3. Removed the unverified certificate/credential placeholder section from pages where it appeared and removed its navigation links. The standalone certifications.html page is reframed as Project Documentation.
+4. Replaced large inline base64 images with separate WebP assets. Embedded image payloads were reduced from about 2.60 MB to about 0.66 MB before HTML serialization; the homepage HTML is now about 125 KB and products.html about 84 KB.
+5. Converted referenced PNG/JPEG assets to WebP variants while retaining original source images in the package.
+6. Added intrinsic image dimensions, async decoding and lazy loading for below-the-fold images; preserved eager loading for logo and initial hero images.
+7. Added page-specific meta descriptions (61 unique descriptions for 61 HTML pages), Open Graph title/description/type and Twitter card metadata.
+8. Added responsive overflow safeguards and prefers-reduced-motion support.
+9. Unified header and footer brand lockups to the same Capvora logo asset across the 61 HTML pages.
+10. Removed generic social-profile placeholder links. Existing WhatsApp and email contact links remain.
+
+Checks performed
+- 61 HTML pages inspected.
+- 61 unique page titles and 61 unique meta descriptions.
+- No broken local page, image, script or stylesheet references found.
+- No remaining embedded base64 image payloads.
+- No remaining certificate placeholder labels or unverified certificate teaser blocks.
+- Homepage retains 19 card entries with CSS showing the first 9; More Styles points to all-hat-styles.html.
+- Full All Hat Styles catalogue retains all 19 cards.
+
+Still requires owner-supplied details before public launch
+- Final Capvora HTTPS domain: needed to generate production canonical URLs, sitemap.xml and robots.txt.
+- Real factory/production video.
+- Real product and factory photographs to replace concept images.
+- Official Facebook and Instagram profile URLs, if those channels are to be linked.
+- Confirm the published email, WhatsApp number and Guangzhou contact address.
+- Any certificates or test reports: publish only authentic, authorized and applicable documents.
+
+SEO finalization
+Open generate-seo-files.py, replace SITE_URL with the final Capvora HTTPS domain, then run:
+    python generate-seo-files.py
+This creates sitemap.xml, robots.txt and canonical tags for the 61 HTML pages.
+Do not publish the placeholder domain value.
+
+
+REVISION — CATEGORY NAVIGATION AND EMPTY SECOND-LEVEL CATALOGUES
+- Homepage now contains exactly 9 hat-category cards (the remaining 10 cards were removed, not merely hidden).
+- Each of the 9 homepage Customize This Style buttons opens its own dedicated hat-styles/<slug>.html page.
+- All 19 dedicated second-level hat category pages have had their visible style title, image, product/style copy, content sections and CTA cleared.
+- Shared header, navigation, footer, language selector, quote modal, SEO page metadata and canonical setup are retained.
+- Breadcrumbs on the empty second-level pages now show Home > Products only.
+- The full All Hat Styles directory remains available with all 19 category entry cards.
+
+
+Homepage hero logo update (v5)
+- Replaced the navy foreground cap wordmark in the homepage hero photograph with the selected Option E: white embroidered shield, letter C and laurel branches.
+- Kept the original HTML hero text, black quote button, navigation, floating WhatsApp/Email/Facebook links, benefits strip, craft links and all other pages unchanged.
+- Updated the homepage hero WebP and JPG assets only.
+
+
+Homepage hero emblem alignment correction (v7)
+- Replaced the actual homepage hero product image referenced by index.html.
+- Centered the white shield-C-laurel embroidery on the navy cap's vertical front-panel seam.
+- Kept the existing site HTML, theme, navigation, black quote button, and contact links unchanged.

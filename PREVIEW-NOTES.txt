@@ -1,0 +1,11 @@
+CAPVORA HOMEPAGE COMPANY STATS UPDATE
+
+Added directly above the existing five-item manufacturing highlights strip:
+- 20+ Years / PRODUCTION EXPERIENCE
+- SGS VERIFIED FACTORY (shield icon)
+
+The 200 Pcs / MOQ statement was NOT added.
+Existing Small Orders Welcome and all five manufacturing highlights remain unchanged.
+Homepage only; the rest of the 60-page site and existing content are retained.
+Local preview package only; not deployed.
+Open index.html.

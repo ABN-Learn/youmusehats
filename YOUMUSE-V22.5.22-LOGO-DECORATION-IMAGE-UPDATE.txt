@@ -1,0 +1,6 @@
+YOUMUSE v22.5.22 — Logo Decoration Image Update
+
+- Refined the 3D Embroidery image with a higher-resolution close-up while preserving the complete maple-leaf and ANUELL embroidery artwork.
+- Kept the Patches and Printing images and their order unchanged.
+- Preserved the three-card layout, headings, descriptions, button, navigation, other pages, and site styling.
+- Preview package only; not deployed.

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>YOUMUSE 中文文章管理</title>
+<link rel="stylesheet" href="editor.css"><script src="editor.js" defer></script>
+</head>
+<body><header><strong>YOUMUSE</strong><span>文章管理</span><a href="/">查看网站</a></header>
+<main><aside><button id="new">新建草稿</button><h2>线上草稿</h2><div id="list"></div></aside>
+<section><h1>编辑文章</h1><p id="status" role="status">正在连接线上草稿存储…</p>
+<form id="editor"><label>网址标识<input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="custom-hat-guide" maxlength="120"></label>
+<label>文章标题<input name="title" required></label>
+<label>SEO 标题<input name="seo_title"></label>
+<label>SEO 描述<textarea name="description" rows="3"></textarea></label>
+<label>Canonical<input name="canonical" type="url" placeholder="https://youmusehats.com/articles/custom-hat-guide.html"></label>
+<label>正文<textarea name="body" rows="18" placeholder="输入正文，用空行分段"></textarea></label>
+<div class="actions"><button type="submit">保存线上草稿</button><button type="button" id="preview">预览正文</button><button type="button" id="delete">删除草稿</button></div>
+</form><dialog id="previewDialog"><button id="close">返回编辑</button><article id="previewContent"></article></dialog>
+</section></main></body></html>

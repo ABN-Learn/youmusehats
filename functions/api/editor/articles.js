@@ -1,6 +1,6 @@
 import { authorize } from "../../_editor/auth.js";
 import { github } from "../../_editor/github.js";
-import { articleFields, renderArticle, updateListings, updateSitemap } from "../../_editor/render.js";
+import { articleFields, renderArticle, updateListings, updateSitemap, refillHomeArticles } from "../../_editor/render.js";
 
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 function json(body, status = 200) {
@@ -61,6 +61,11 @@ export async function onRequest({ request, env }) {
       if (!html) continue;
       const result = updateListings(html,slug,fields,remove,listing==="index.html",listing.startsWith("blog-categories/") ? "../" : "");
       if(result!==html) changes[listing]=result;
+    }
+    if (remove) {
+      const home = changes['index.html'] ?? listings.find(([path]) => path === 'index.html')?.[1];
+      const blog = changes['blog.html'] ?? listings.find(([path]) => path === 'blog.html')?.[1];
+      if (home && blog) changes['index.html'] = refillHomeArticles(home, blog);
     }
     const sitemap = await git.read("sitemap.xml",snapshot);
     if(!sitemap) throw new Error("站点地图缺失");

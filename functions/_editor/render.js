@@ -88,3 +88,22 @@ export function updateSitemap(xml, slug, remove) {
   xml = xml.replace(/<url>[\s\S]*?<\/url>/g, entry => entry.includes("<loc>" + url + "</loc>") ? "" : entry);
   return remove ? xml : xml.replace("</urlset>", "  <url><loc>" + escapeHtml(url) + "</loc></url>\n</urlset>");
 }
+
+export function refillHomeArticles(home, blog) {
+  let cards = home.match(/<a class="blog-preview-card"[\s\S]*?<\/a>/g) || [];
+  if (cards.length >= 3) return home;
+  const additions = [];
+  for (const card of blog.match(/<article class="journal-card"[\s\S]*?<\/article>/g) || []) {
+    const href = card.match(/href="(articles\/[^"#]+)"/)?.[1];
+    if (!href || cards.some(existing => existing.includes('href="' + href + '"'))) continue;
+    const title = card.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] || '';
+    const description = card.match(/<p>([\s\S]*?)<\/p>/)?.[1] || '';
+    const image = card.match(/<img\b[^>]*>/)?.[0] || '';
+    const category = card.match(/data-category="([^"]*)"/)?.[1] || 'Know-how';
+    const preview = '<a class="blog-preview-card" href="' + href + '">' + (image ? '<div class="blog-preview-image">' + image + '</div>' : '') + '<span class="blog-preview-category">' + category + '</span><h3>' + title + '</h3><p>' + description + '</p><span class="blog-preview-read">Read Article →</span></a>';
+    cards.push(preview); additions.push(preview);
+    if (cards.length === 3) break;
+  }
+  if (!home.includes('<a class="blog-preview-card"')) return home.replace('<div class="blog-preview-grid">', '<div class="blog-preview-grid">' + additions.join(''));
+  return home.replace(/(<a class="blog-preview-card"[\s\S]*?<\/a>)(?![\s\S]*<a class="blog-preview-card")/, '$1' + additions.join(''));
+}

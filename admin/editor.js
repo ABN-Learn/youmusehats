@@ -1,11 +1,13 @@
 const form = document.querySelector("#editor");
 const status = document.querySelector("#status");
 let busy = false;
+let authorization = "";
+const loginForm = document.querySelector("#login");
 function report(message) { status.textContent = message; }
 async function api(method, slug, body) {
   const response = await fetch("/api/editor/drafts" + (slug ? "?slug=" + encodeURIComponent(slug) : ""), {
-    method, credentials: "same-origin",
-    headers: { "Content-Type": "application/json", "X-YOUMUSE-Editor": "1" },
+    method, credentials: "same-origin", signal: AbortSignal.timeout(15000),
+    headers: { "Content-Type": "application/json", "X-YOUMUSE-Editor": "1", Authorization: authorization },
     body: body === undefined ? undefined : JSON.stringify(body)
   });
   let result;
@@ -28,7 +30,7 @@ async function list() {
   const slugs = [];
   let cursor;
   do {
-    const response = await fetch("/api/editor/drafts" + (cursor ? "?cursor=" + encodeURIComponent(cursor) : ""), { credentials: "same-origin" });
+    const response = await fetch("/api/editor/drafts" + (cursor ? "?cursor=" + encodeURIComponent(cursor) : ""), { credentials: "same-origin", headers: { Authorization: authorization }, signal: AbortSignal.timeout(15000) });
     let result;
     try { result = await response.json(); } catch { throw new Error("请完成后台登录后刷新页面。"); }
     if (!response.ok) throw new Error(result.error || "读取草稿失败");
@@ -90,4 +92,20 @@ document.querySelector("#preview").onclick = () => {
   document.querySelector("#previewDialog").showModal();
 };
 document.querySelector("#close").onclick = () => document.querySelector("#previewDialog").close();
-task(async () => { await list(); report("已连接线上草稿存储"); });
+loginForm.onsubmit = event => {
+  event.preventDefault();
+  task(async () => {
+    const bytes = new TextEncoder().encode("editor:" + loginForm.elements.password.value);
+    authorization = "Basic " + btoa(String.fromCharCode(...bytes));
+    loginForm.elements.password.value = "";
+    try {
+      await list();
+      report("已登录，已连接线上草稿存储");
+      loginForm.hidden = true;
+    } catch (error) {
+      authorization = "";
+      throw error;
+    }
+  });
+};
+report("请先输入后台密码登录");

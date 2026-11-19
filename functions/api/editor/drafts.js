@@ -23,12 +23,9 @@ export async function onRequest({ request, env }) {
     return json({ error: "编辑器尚未配置线上存储或登录" }, 503);
   }
   const authorization = request.headers.get("Authorization") || "";
-  const expected = "Basic " + btoa("editor:" + env.EDITOR_PASSWORD);
+  const expected = "Basic " + btoa(String.fromCharCode(...new TextEncoder().encode("editor:" + env.EDITOR_PASSWORD)));
   if (!(await matchesSecret(authorization, expected))) {
-    return new Response("需要登录", {
-      status: 401,
-      headers: { "WWW-Authenticate": 'Basic realm="YOUMUSE Editor"', "Cache-Control": "no-store" }
-    });
+    return json({ error: "密码错误或尚未登录" }, 401);
   }
   const url = new URL(request.url);
   const slug = url.searchParams.get("slug");

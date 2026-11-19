@@ -7,7 +7,7 @@
 </head>
 <body><header><strong>YOUMUSE</strong><span>文章管理</span><a href="/">查看网站</a></header>
 <main><aside><button id="new">新建草稿</button><h2>线上草稿</h2><div id="list"></div></aside>
-<section><h1>编辑文章</h1><p id="status" role="status">正在连接线上草稿存储…</p>
+<section><h1>编辑文章</h1><form id="login"><label>后台密码<input name="password" type="password" autocomplete="current-password" required></label><button type="submit">登录</button></form><p id="status" role="status">正在连接线上草稿存储…</p>
 <form id="editor"><label>网址标识<input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="custom-hat-guide" maxlength="120"></label>
 <label>文章标题<input name="title" required></label>
 <label>SEO 标题<input name="seo_title"></label>

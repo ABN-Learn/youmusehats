@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="editor.css"><script src="editor.js" defer></script>
 </head>
 <body><header><strong>YOUMUSE</strong><span>文章管理</span><a href="/">查看网站</a></header>
-<main><aside><button id="new">新建草稿</button><h2>线上草稿</h2><div id="list"></div></aside>
+<main><aside><button id="new">新建草稿</button><h2>正式文章</h2><button id="loadPublished">读取正式文章</button><div id="published"></div><h2>线上草稿</h2><div id="list"></div></aside>
 <section><h1>编辑文章</h1><form id="login"><label>后台密码<input name="password" type="password" autocomplete="current-password" required></label><button type="submit">登录</button></form><p id="status" role="status">正在连接线上草稿存储…</p>
 <form id="editor"><label>网址标识<input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="custom-hat-guide" maxlength="120"></label>
 <label>文章标题<input name="title" required></label>
@@ -14,6 +14,13 @@
 <label>SEO 描述<textarea name="description" rows="3"></textarea></label>
 <label>Canonical<input name="canonical" type="url" placeholder="https://youmusehats.com/articles/custom-hat-guide.html"></label>
 <label>正文<textarea name="body" rows="18" placeholder="输入正文，用空行分段"></textarea></label>
-<div class="actions"><button type="submit">保存线上草稿</button><button type="button" id="preview">预览正文</button><button type="button" id="delete">删除草稿</button></div>
+<div class="actions"><button type="submit">保存线上草稿</button><button type="button" id="preview">预览正文</button><button type="button" id="delete">删除草稿</button><button type="button" id="publish">发布到正式站</button><button type="button" id="withdraw">撤回正式文章</button><button type="button" id="deletePublished">删除正式文章</button></div>
 </form><dialog id="previewDialog"><button id="close">返回编辑</button><article id="previewContent"></article></dialog>
+<hr><h2>主题管理</h2><button id="loadThemes" type="button">读取主题</button><select id="themes"><option value="">新建主题</option></select>
+<form id="themeForm"><label>主题标识<input name="id" pattern="[a-z0-9-]+" required></label><label>主题名称<input name="name" required></label>
+<label>主色<input name="primary" type="color" value="#183b56"></label><label>文字颜色<input name="text" type="color" value="#111111"></label>
+<label>背景颜色<input name="background" type="color" value="#ffffff"></label><label>按钮文字颜色<input name="buttonText" type="color" value="#ffffff"></label>
+<label>字体<select name="font"><option>Arial</option><option>Georgia</option><option>Verdana</option><option>Tahoma</option></select></label>
+<label>按钮圆角<input name="radius" type="number" min="0" max="30" value="6"></label>
+<button type="submit">保存主题</button><button type="button" id="activateTheme">应用选中主题</button><button type="button" id="removeTheme">删除选中主题</button><button type="button" id="resetTheme">恢复网站原主题</button></form>
 </section></main></body></html>

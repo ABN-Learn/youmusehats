@@ -1,3 +1,4 @@
+import { authorize } from "../../_editor/auth.js";
 const fields = ["title", "seo_title", "description", "canonical", "body"];
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const prefix = "article:";
@@ -6,27 +7,10 @@ function json(value, status = 200) {
   return Response.json(value, { status, headers: { "Cache-Control": "no-store" } });
 }
 
-async function matchesSecret(provided, expected) {
-  const encoder = new TextEncoder();
-  const [left, right] = await Promise.all([provided, expected].map(async value =>
-    new Uint8Array(await crypto.subtle.digest("SHA-256", encoder.encode(value)))
-  ));
-  let difference = 0;
-  for (let index = 0; index < left.length; index++) {
-    difference |= left[index] ^ right[index];
-  }
-  return difference === 0;
-}
-
 export async function onRequest({ request, env }) {
-  if (!env.EDITOR_PASSWORD || !env.EDITOR_DRAFTS) {
-    return json({ error: "编辑器尚未配置线上存储或登录" }, 503);
-  }
-  const authorization = request.headers.get("Authorization") || "";
-  const expected = "Basic " + btoa(String.fromCharCode(...new TextEncoder().encode("editor:" + env.EDITOR_PASSWORD)));
-  if (!(await matchesSecret(authorization, expected))) {
-    return json({ error: "密码错误或尚未登录" }, 401);
-  }
+  const denied = await authorize(request, env, request.method !== "GET");
+  if (denied) return denied;
+  if (!env.EDITOR_DRAFTS) return json({error:"草稿存储尚未配置"},503);
   const url = new URL(request.url);
   const slug = url.searchParams.get("slug");
   if (slug !== null && (slug.length > 120 || !slugPattern.test(slug))) {

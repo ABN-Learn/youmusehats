@@ -1,0 +1,14 @@
+{
+  "active": null,
+  "themes": {
+    "editor-verification": {
+      "name": "后台验收主题",
+      "primary": "#183b56",
+      "text": "#111111",
+      "background": "#ffffff",
+      "buttonText": "#ffffff",
+      "font": "Arial",
+      "radius": "6"
+    }
+  }
+}

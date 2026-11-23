@@ -1405,60 +1405,42 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 #factory-and-documents .document-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  max-width: 1080px;
+  gap: clamp(12px, 2.5vw, 28px);
+  max-width: 1020px;
   margin: 30px auto 24px;
   padding: 0;
   list-style: none;
 }
-#factory-and-documents .document-card {
-  min-width: 0;
-  padding: 18px 14px;
-  border: 1px solid #e8edf2;
-  box-shadow: 0 2px 8px rgb(20 43 70 / 4%);
-  border-radius: 12px;
-  background: #fff;
-  text-align: center;
-}
+#factory-and-documents .document-card { min-width: 0; text-align: center; }
 #factory-and-documents .document-preview {
-  display: grid;
-  place-items: center;
-  height: clamp(230px, 31vw, 324px);
-  container-type: size;
+  display: block;
+  box-sizing: border-box;
+  border: clamp(4px, .75vw, 9px) double #9f7322;
+  padding: 3px;
   background: #fff;
+}
+#factory-and-documents .document-preview:hover,
+#factory-and-documents .document-preview:focus-visible {
+  outline: 2px solid #142b46;
+  outline-offset: 3px;
 }
 #factory-and-documents .document-preview img {
   display: block;
-  width: min(100%, 230px, 69cqh);
+  width: 100%;
   height: auto;
-  max-width: min(100%, 230px);
-  max-height: 100%;
-  /* Hide the yellow trim embedded in the archived preview. */
+  aspect-ratio: 137 / 198;
+  object-fit: contain;
   clip-path: inset(1.5% 2.2%);
 }
 #factory-and-documents .document-name {
   display: block;
-  margin: 14px 0 4px;
-  color: #142b46;
-  font-size: clamp(15px, 2vw, 19px);
-  line-height: 1.25;
-  font-weight: 700;
+  margin: 6px 0 0;
+  color: #111;
+  font-size: clamp(14px, 3vw, 34px);
+  line-height: 1.2;
+  font-weight: 750;
 }
-#factory-and-documents .document-type {
-  display: block;
-  color: #435872;
-  font-size: 13px;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
-}
-@media (max-width: 680px) {
-  #factory-and-documents .document-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-  }
-  #factory-and-documents .document-card { padding: 10px 8px 14px; }
-  #factory-and-documents .document-preview { height: clamp(150px, 58vw, 300px); }
-}
+
 </style>
 <style>
 .factory-tour .factory-player-local {
@@ -1633,12 +1615,12 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 <div class="container center"><h2 id="home-documents-title">Audit, Certification &amp; Test Documents</h2>
 <p class="sub">These archived documents are for reference. Contact us privately to confirm which current documents apply to your order.</p>
 <ul class="document-grid">
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-bsci.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></div><strong class="document-name">amfori BSCI</strong><span class="document-type">Social audit report</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-gots.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">GOTS</strong><span class="document-type">Global Organic Textile Standard</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-grs.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">GRS</strong><span class="document-type">Global Recycled Standard</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-ocs.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></div><strong class="document-name" translate="no">OCS</strong><span class="document-type">Organic Content Standard</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-oeko-tex.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">OEKO-TEX®</strong><span class="document-type">STANDARD 100 certificate</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-intertek.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">Intertek</strong><span class="document-type">Textile test report</span></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-bsci.webp" target="_blank" rel="noopener" aria-label="Open BSCI Social audit report in a new tab"><img src="/assets/home-factory/archived-bsci.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">BSCI</strong></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-gots.webp" target="_blank" rel="noopener" aria-label="Open GOTS Global Organic Textile Standard in a new tab"><img src="/assets/home-factory/archived-gots.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">GOTS</strong></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-grs.webp" target="_blank" rel="noopener" aria-label="Open GRS Global Recycled Standard in a new tab"><img src="/assets/home-factory/archived-grs.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">GRS</strong></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-ocs.webp" target="_blank" rel="noopener" aria-label="Open OCS Organic Content Standard in a new tab"><img src="/assets/home-factory/archived-ocs.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">OCS</strong></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-oeko-tex.webp" target="_blank" rel="noopener" aria-label="Open OEKO STANDARD 100 certificate in a new tab"><img src="/assets/home-factory/archived-oeko-tex.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">OEKO</strong></li>
+<li class="document-card"><a class="document-preview" href="/assets/home-factory/archived-intertek.webp" target="_blank" rel="noopener" aria-label="Open TC Textile test report in a new tab"><img src="/assets/home-factory/archived-intertek.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></a><strong class="document-name" translate="no">TC</strong></li>
 </ul>
 <a class="textlink" href="contact.html#contact-inquiry">Request Documents →</a>
 </div></section>

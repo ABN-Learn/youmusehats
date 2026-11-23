@@ -1414,7 +1414,8 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 #factory-and-documents .document-card {
   min-width: 0;
   padding: 18px 14px;
-  border: 1px solid #e1e7ed;
+  border: 1px solid #e8edf2;
+  box-shadow: 0 2px 8px rgb(20 43 70 / 4%);
   border-radius: 12px;
   background: #fff;
   text-align: center;
@@ -1427,11 +1428,12 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 }
 #factory-and-documents .document-preview img {
   display: block;
-  width: 100%;
-  max-width: 230px;
-  height: 100%;
-  min-height: 0;
-  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 230px);
+  max-height: 100%;
+  /* Hide the yellow trim embedded in the archived preview. */
+  clip-path: inset(1.5% 2.2%);
 }
 #factory-and-documents .document-name {
   display: block;

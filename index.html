@@ -1401,14 +1401,61 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 @media(max-width:700px){#customization-options .cardimg{width:calc(100% - 28px)!important;aspect-ratio:1.7/1;height:auto!important;margin:14px 14px 0}}
 </style>
 <style>
-#factory-and-documents{background:#fff}
-#factory-and-documents .document-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:960px;margin:30px auto 24px;padding:0;list-style:none}
-#factory-and-documents .document-card{min-width:0;display:flex;flex-direction:column;padding:12px;border:1px solid #dce4eb;border-radius:14px;background:#fff;text-align:left}
-#factory-and-documents .document-preview{display:grid;place-items:center;background:#f4f7fa;border-radius:8px;padding:12px;min-height:142px}
-#factory-and-documents .document-preview img{display:block;width:100%;max-width:137px;height:auto;border:1px solid #e1e7ed}
-#factory-and-documents .document-name{display:block;margin:12px 4px 2px;color:#142b46;font-size:clamp(16px,2.4vw,22px);line-height:1.2;font-weight:700}
-#factory-and-documents .document-type{display:block;margin:0 4px 5px;color:#435872;font-size:14px;line-height:1.4;overflow-wrap:anywhere}
-@media(max-width:680px){#factory-and-documents .document-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#factory-and-documents .document-card{padding:8px}#factory-and-documents .document-preview{padding:8px;min-height:0}}
+#factory-and-documents { background: #fff; }
+#factory-and-documents .document-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1080px;
+  margin: 30px auto 24px;
+  padding: 0;
+  list-style: none;
+}
+#factory-and-documents .document-card {
+  min-width: 0;
+  padding: 18px 14px;
+  border: 1px solid #e1e7ed;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+#factory-and-documents .document-preview {
+  display: grid;
+  place-items: center;
+  height: clamp(230px, 31vw, 324px);
+  background: #fff;
+}
+#factory-and-documents .document-preview img {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+#factory-and-documents .document-name {
+  display: block;
+  margin: 14px 0 4px;
+  color: #142b46;
+  font-size: clamp(15px, 2vw, 19px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+#factory-and-documents .document-type {
+  display: block;
+  color: #435872;
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 680px) {
+  #factory-and-documents .document-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  #factory-and-documents .document-card { padding: 10px 8px 14px; }
+  #factory-and-documents .document-preview { height: clamp(150px, 58vw, 300px); }
+}
 </style>
 <style>
 .factory-tour .factory-player-local {
@@ -1586,7 +1633,7 @@ html body .youmuse-logo-compare .center a.cap-21-cta:hover{background:#123b73!im
 <li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-bsci.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></div><strong class="document-name">amfori BSCI</strong><span class="document-type">Social audit report</span></li>
 <li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-gots.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">GOTS</strong><span class="document-type">Global Organic Textile Standard</span></li>
 <li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-grs.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">GRS</strong><span class="document-type">Global Recycled Standard</span></li>
-<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-ocs.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></div><strong class="document-name">OCS</strong><span class="document-type">Organic Content Standard</span></li>
+<li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-ocs.webp" alt="" width="136" height="198" loading="lazy" decoding="async"></div><strong class="document-name" translate="no">OCS</strong><span class="document-type">Organic Content Standard</span></li>
 <li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-oeko-tex.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">OEKO-TEX®</strong><span class="document-type">STANDARD 100 certificate</span></li>
 <li class="document-card"><div class="document-preview"><img src="/assets/home-factory/archived-intertek.webp" alt="" width="137" height="198" loading="lazy" decoding="async"></div><strong class="document-name">Intertek</strong><span class="document-type">Textile test report</span></li>
 </ul>

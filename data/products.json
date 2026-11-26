@@ -7,14 +7,15 @@
       {
         "status": "published",
         "slug": "classic-curved-brim-baseball-cap",
-        "name": "Cotton Baseball Cap with Flat Embroidery",
-        "description": "Pure cotton baseball cap with a curved brim and flat embroidered logo. Customize colors, logo placement and back closure.",
+        "name": "Cotton Twill Baseball Cap with Flat Embroidery",
+        "description": "100% cotton twill baseball cap with a curved brim, adjustable fit and flat embroidered logo. Custom colors and branding available.",
         "image": "assets/products/baseball-caps/cotton-flat-embroidery.webp",
         "techniques": [
           "Embroidery"
         ],
         "materials": [
-          "Cotton"
+          "Cotton",
+          "Cotton Twill"
         ],
         "applications": [
           "Casual",
@@ -23,7 +24,38 @@
           "Teamwear",
           "Sports"
         ],
-        "customization": "Colors, flat embroidery, logo placement, back closures, inside labels and packaging"
+        "customization": "Colors, flat embroidery, logo placement, back closures, inside labels and packaging",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/cotton-flat-embroidery.webp",
+            "alt": "Three-quarter view"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-front.webp",
+            "alt": "Front view"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-right.webp",
+            "alt": "Right side view"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-back.webp",
+            "alt": "Back view"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-left.webp",
+            "alt": "Left side view"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat embroidery",
+          "Fabric": "Cotton twill",
+          "Material": "100% cotton",
+          "Gender": "Unisex",
+          "Scene": "Casual wear, outdoor activities, corporate uniforms and promotional events",
+          "Series": "Classic Baseball Cap Collection"
+        },
+        "detailTemplate": "product-detail-v1"
       }
     ],
     "beanies": [],

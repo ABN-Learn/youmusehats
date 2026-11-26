@@ -57,6 +57,872 @@
         },
         "detailTemplate": "product-detail-v1",
         "catalogName": "Cotton Twill Cap with Flat Embroidery"
+      },
+      {
+        "status": "published",
+        "slug": "oak-leaf-cotton-baseball-cap",
+        "name": "Cotton Twill Cap with Leaf Embroidery",
+        "catalogName": "Cotton Twill Cap with Leaf Embroidery",
+        "description": "A classic six-panel cotton twill cap with an embroidered oak-leaf motif, curved brim and adjustable fit.",
+        "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Outdoor",
+          "Casual",
+          "Corporate"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 1,
+        "fabric": "Cotton twill",
+        "panelStyle": "6-panel",
+        "craft": "Flat embroidery",
+        "series": "Classic",
+        "intro": "A classic six-panel cotton twill cap with an embroidered oak-leaf motif, curved brim and adjustable fit.",
+        "detail": "A diagonal twill weave and tonal seams give this cap a familiar everyday feel. The leaf motif uses compact satin stitches that keep the decoration crisp without foam padding.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Cotton Twill Cap with Leaf Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/front.webp",
+            "alt": "Front view of Cotton Twill Cap with Leaf Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/right.webp",
+            "alt": "Right side view of Cotton Twill Cap with Leaf Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/back.webp",
+            "alt": "Back view of Cotton Twill Cap with Leaf Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/oak-leaf-cotton-baseball-cap/left.webp",
+            "alt": "Left side view of Cotton Twill Cap with Leaf Embroidery"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat embroidery",
+          "Fabric": "Cotton twill",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Outdoor, Casual, Corporate",
+          "Series": "Classic Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "corduroy-five-panel-embroidered-cap",
+        "name": "Corduroy 5-Panel Embroidered Cap",
+        "catalogName": "Corduroy 5-Panel Embroidered Cap",
+        "description": "Fine-wale corduroy, a contrasting curved brim and embroidered script give this five-panel cap a relaxed vintage look.",
+        "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Corduroy"
+        ],
+        "applications": [
+          "Casual",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 2,
+        "fabric": "Fine-wale corduroy",
+        "panelStyle": "5-panel",
+        "craft": "Flat script embroidery",
+        "series": "Heritage",
+        "intro": "Fine-wale corduroy, a contrasting curved brim and embroidered script give this five-panel cap a relaxed vintage look.",
+        "detail": "The narrow corduroy ribs bring a soft directional texture to the crown. A broad front panel provides room for flowing script, while the contrasting visor defines the two-tone design.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Corduroy 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/front.webp",
+            "alt": "Front view of Corduroy 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/right.webp",
+            "alt": "Right side view of Corduroy 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/back.webp",
+            "alt": "Back view of Corduroy 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/corduroy-five-panel-embroidered-cap/left.webp",
+            "alt": "Left side view of Corduroy 5-Panel Embroidered Cap"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat script embroidery",
+          "Fabric": "Fine-wale corduroy",
+          "Material": "Corduroy",
+          "Gender": "Unisex",
+          "Scene": "Casual, Promotional",
+          "Series": "Heritage Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "camo-cap-with-3d-monogram",
+        "name": "Camo Cap with 3D Embroidery",
+        "catalogName": "Camo Cap with 3D Embroidery",
+        "description": "A camouflage baseball cap with a curved brim and bold raised monogram for outdoor-inspired collections.",
+        "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/three-quarter.webp",
+        "techniques": [
+          "3D Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Outdoor",
+          "Teamwear",
+          "Casual"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 3,
+        "fabric": "Camouflage woven fabric",
+        "panelStyle": "6-panel",
+        "craft": "3D puff embroidery",
+        "series": "Outdoor",
+        "intro": "A camouflage baseball cap with a curved brim and bold raised monogram for outdoor-inspired collections.",
+        "detail": "A woodland pattern creates a layered background for the raised front initial. Foam-backed stitching gives the monogram height; logo stroke width and stitch coverage are reviewed at sampling.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/three-quarter.webp",
+            "alt": "Three-quarter view of Camo Cap with 3D Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/front.webp",
+            "alt": "Front view of Camo Cap with 3D Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/right.webp",
+            "alt": "Right side view of Camo Cap with 3D Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/back.webp",
+            "alt": "Back view of Camo Cap with 3D Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/camo-cap-with-3d-monogram/left.webp",
+            "alt": "Left side view of Camo Cap with 3D Embroidery"
+          }
+        ],
+        "attributes": {
+          "Craft": "3D puff embroidery",
+          "Fabric": "Camouflage woven fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Outdoor, Teamwear, Casual",
+          "Series": "Outdoor Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "perforated-cap-with-rubber-patch",
+        "name": "Perforated Cap with Rubber Patch",
+        "catalogName": "Perforated Cap with Rubber Patch",
+        "description": "A five-panel technical cap with laser-perforated side panels, a curved brim and a compact rubber badge.",
+        "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/three-quarter.webp",
+        "techniques": [
+          "Laser Perforation",
+          "Patches"
+        ],
+        "materials": [
+          "Polyester"
+        ],
+        "applications": [
+          "Sports",
+          "Outdoor",
+          "Corporate"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 4,
+        "fabric": "Perforated technical fabric",
+        "panelStyle": "5-panel",
+        "craft": "Rubber patch and laser perforation",
+        "series": "Performance",
+        "intro": "A five-panel technical cap with laser-perforated side panels, a curved brim and a compact rubber badge.",
+        "detail": "Evenly spaced perforations add open ventilation areas at the sides. A small molded badge provides defined edges on the front panel; its thickness, backing and attachment method can be selected for the order.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/three-quarter.webp",
+            "alt": "Three-quarter view of Perforated Cap with Rubber Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/front.webp",
+            "alt": "Front view of Perforated Cap with Rubber Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/right.webp",
+            "alt": "Right side view of Perforated Cap with Rubber Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/back.webp",
+            "alt": "Back view of Perforated Cap with Rubber Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/perforated-cap-with-rubber-patch/left.webp",
+            "alt": "Left side view of Perforated Cap with Rubber Patch"
+          }
+        ],
+        "attributes": {
+          "Craft": "Rubber patch and laser perforation",
+          "Fabric": "Perforated technical fabric",
+          "Material": "Polyester",
+          "Gender": "Unisex",
+          "Scene": "Sports, Outdoor, Corporate",
+          "Series": "Performance Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "canvas-cap-with-woven-patch",
+        "name": "Canvas Cap with Woven Patch",
+        "catalogName": "Canvas Cap with Woven Patch",
+        "description": "A canvas five-panel baseball cap with a woven sunset patch and curved brim, suited to casual outdoor collections.",
+        "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/three-quarter.webp",
+        "techniques": [
+          "Patches"
+        ],
+        "materials": [
+          "Canvas"
+        ],
+        "applications": [
+          "Outdoor",
+          "Casual",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 5,
+        "fabric": "Woven canvas",
+        "panelStyle": "5-panel",
+        "craft": "Woven patch",
+        "series": "Outdoor",
+        "intro": "A canvas five-panel baseball cap with a woven sunset patch and curved brim, suited to casual outdoor collections.",
+        "detail": "The canvas surface gives the cap a substantial woven texture. A rectangular sunset-and-wave badge uses a woven construction to hold the small graphic details, with a sewn border for attachment.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/three-quarter.webp",
+            "alt": "Three-quarter view of Canvas Cap with Woven Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/front.webp",
+            "alt": "Front view of Canvas Cap with Woven Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/right.webp",
+            "alt": "Right side view of Canvas Cap with Woven Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/back.webp",
+            "alt": "Back view of Canvas Cap with Woven Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/canvas-cap-with-woven-patch/left.webp",
+            "alt": "Left side view of Canvas Cap with Woven Patch"
+          }
+        ],
+        "attributes": {
+          "Craft": "Woven patch",
+          "Fabric": "Woven canvas",
+          "Material": "Canvas",
+          "Gender": "Unisex",
+          "Scene": "Outdoor, Casual, Promotional",
+          "Series": "Outdoor Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "cotton-cap-with-letter-embroidery",
+        "name": "Cotton Cap with Letter Embroidery",
+        "catalogName": "Cotton Cap with Letter Embroidery",
+        "description": "A cotton six-panel baseball cap with an intertwined letter logo, curved brim and adjustable rear strap.",
+        "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Corporate",
+          "Casual",
+          "Teamwear"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 6,
+        "fabric": "Cotton woven fabric",
+        "panelStyle": "6-panel",
+        "craft": "Flat monogram embroidery",
+        "series": "Classic",
+        "intro": "A cotton six-panel baseball cap with an intertwined letter logo, curved brim and adjustable rear strap.",
+        "detail": "A clean cotton crown allows the monogram to be the focal point. Intersecting letter strokes are digitized for even thread coverage and readable edges across the front seam.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/three-quarter.webp",
+            "alt": "Three-quarter view of Cotton Cap with Letter Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/front.webp",
+            "alt": "Front view of Cotton Cap with Letter Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/right.webp",
+            "alt": "Right side view of Cotton Cap with Letter Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/back.webp",
+            "alt": "Back view of Cotton Cap with Letter Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/cotton-cap-with-letter-embroidery/left.webp",
+            "alt": "Left side view of Cotton Cap with Letter Embroidery"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat monogram embroidery",
+          "Fabric": "Cotton woven fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Corporate, Casual, Teamwear",
+          "Series": "Classic Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "sports-cap-with-lightning-embroidery",
+        "name": "Sports Cap with Logo Embroidery",
+        "catalogName": "Sports Cap with Logo Embroidery",
+        "description": "A textured polyester baseball cap with a lightning emblem and curved brim for teamwear and active brand collections.",
+        "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Polyester"
+        ],
+        "applications": [
+          "Sports",
+          "Teamwear",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 7,
+        "fabric": "Textured polyester fabric",
+        "panelStyle": "6-panel",
+        "craft": "Flat embroidery",
+        "series": "Sports",
+        "intro": "A textured polyester baseball cap with a lightning emblem and curved brim for teamwear and active brand collections.",
+        "detail": "A compact front emblem provides a strong shape with limited stitch complexity. The textured woven shell pairs with a classic six-panel crown; sweatband and closure choices can be coordinated for the intended use.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/three-quarter.webp",
+            "alt": "Three-quarter view of Sports Cap with Logo Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/front.webp",
+            "alt": "Front view of Sports Cap with Logo Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/right.webp",
+            "alt": "Right side view of Sports Cap with Logo Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/back.webp",
+            "alt": "Back view of Sports Cap with Logo Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/sports-cap-with-lightning-embroidery/left.webp",
+            "alt": "Left side view of Sports Cap with Logo Embroidery"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat embroidery",
+          "Fabric": "Textured polyester fabric",
+          "Material": "Polyester",
+          "Gender": "Unisex",
+          "Scene": "Sports, Teamwear, Promotional",
+          "Series": "Sports Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "washed-cotton-moon-embroidered-cap",
+        "name": "Washed Cotton Embroidered Cap",
+        "catalogName": "Washed Cotton Embroidered Cap",
+        "description": "A washed cotton baseball cap with moon-and-star embroidery, a soft-looking crown and curved brim.",
+        "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Casual",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 8,
+        "fabric": "Washed cotton fabric",
+        "panelStyle": "6-panel",
+        "craft": "Flat embroidery and washed finish",
+        "series": "Vintage",
+        "intro": "A washed cotton baseball cap with moon-and-star embroidery, a soft-looking crown and curved brim.",
+        "detail": "The washed finish creates tonal variation along seams and fabric edges. Small celestial motifs add detail without covering the worn-in fabric texture; wash shade and embroidery contrast are selected during sampling.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Washed Cotton Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/front.webp",
+            "alt": "Front view of Washed Cotton Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/right.webp",
+            "alt": "Right side view of Washed Cotton Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/back.webp",
+            "alt": "Back view of Washed Cotton Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/washed-cotton-moon-embroidered-cap/left.webp",
+            "alt": "Left side view of Washed Cotton Embroidered Cap"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat embroidery and washed finish",
+          "Fabric": "Washed cotton fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Casual, Promotional",
+          "Series": "Vintage Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "tie-dye-cap-with-fern-print",
+        "name": "Tie-Dye Cap with Printed Logo",
+        "catalogName": "Tie-Dye Cap with Printed Logo",
+        "description": "A tie-dye cotton five-panel cap with a printed fern graphic and curved brim for relaxed casual collections.",
+        "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/three-quarter.webp",
+        "techniques": [
+          "Screen Printing"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Casual",
+          "Outdoor",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 9,
+        "fabric": "Tie-dyed cotton fabric",
+        "panelStyle": "5-panel",
+        "craft": "Screen printing and tie-dye finish",
+        "series": "Lifestyle",
+        "intro": "A tie-dye cotton five-panel cap with a printed fern graphic and curved brim for relaxed casual collections.",
+        "detail": "The organic dye pattern makes each panel visually different. A single-color botanical print keeps the artwork readable against the changing background; print placement and ink coverage can be adjusted for the chosen fabric.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/three-quarter.webp",
+            "alt": "Three-quarter view of Tie-Dye Cap with Printed Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/front.webp",
+            "alt": "Front view of Tie-Dye Cap with Printed Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/right.webp",
+            "alt": "Right side view of Tie-Dye Cap with Printed Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/back.webp",
+            "alt": "Back view of Tie-Dye Cap with Printed Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/tie-dye-cap-with-fern-print/left.webp",
+            "alt": "Left side view of Tie-Dye Cap with Printed Logo"
+          }
+        ],
+        "attributes": {
+          "Craft": "Screen printing and tie-dye finish",
+          "Fabric": "Tie-dyed cotton fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Casual, Outdoor, Promotional",
+          "Series": "Lifestyle Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "butterfly-rhinestone-baseball-cap",
+        "name": "Butterfly Embroidered Fashion Cap",
+        "catalogName": "Butterfly Embroidered Fashion Cap",
+        "description": "A cotton baseball cap with butterfly embroidery and decorative rhinestone accents, finished with a curved brim.",
+        "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Casual",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 10,
+        "fabric": "Cotton woven fabric",
+        "panelStyle": "6-panel",
+        "craft": "Butterfly embroidery with rhinestone accents",
+        "series": "Fashion",
+        "intro": "A cotton baseball cap with butterfly embroidery and decorative rhinestone accents, finished with a curved brim.",
+        "detail": "Thread outlines define the butterfly wings while small rhinestone details add controlled sparkle. Accent size, placement and attachment are reviewed with the decorated sample.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Butterfly Embroidered Fashion Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/front.webp",
+            "alt": "Front view of Butterfly Embroidered Fashion Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/right.webp",
+            "alt": "Right side view of Butterfly Embroidered Fashion Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/back.webp",
+            "alt": "Back view of Butterfly Embroidered Fashion Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/butterfly-rhinestone-baseball-cap/left.webp",
+            "alt": "Left side view of Butterfly Embroidered Fashion Cap"
+          }
+        ],
+        "attributes": {
+          "Craft": "Butterfly embroidery with rhinestone accents",
+          "Fabric": "Cotton woven fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Casual, Promotional",
+          "Series": "Fashion Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "floral-two-tone-embroidered-cap",
+        "name": "Two-Tone Floral Embroidered Cap",
+        "catalogName": "Two-Tone Floral Embroidered Cap",
+        "description": "A two-tone cotton cap with a floral sprig and star embroidery, contrasting curved brim and adjustable fit.",
+        "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Casual",
+          "Corporate",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 11,
+        "fabric": "Cotton woven fabric",
+        "panelStyle": "6-panel",
+        "craft": "Flat floral embroidery",
+        "series": "Lifestyle",
+        "intro": "A two-tone cotton cap with a floral sprig and star embroidery, contrasting curved brim and adjustable fit.",
+        "detail": "The light crown gives the embroidered botanical design room to stand out. Coordinated eyelets, top button and visor create a balanced two-tone finish; the motif can be replaced with your own artwork.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Two-Tone Floral Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/front.webp",
+            "alt": "Front view of Two-Tone Floral Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/right.webp",
+            "alt": "Right side view of Two-Tone Floral Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/back.webp",
+            "alt": "Back view of Two-Tone Floral Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/floral-two-tone-embroidered-cap/left.webp",
+            "alt": "Left side view of Two-Tone Floral Embroidered Cap"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat floral embroidery",
+          "Fabric": "Cotton woven fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Casual, Corporate, Promotional",
+          "Series": "Lifestyle Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "denim-cap-with-script-and-studs",
+        "name": "Denim Cap with Script Embroidery",
+        "catalogName": "Denim Cap with Script Embroidery",
+        "description": "A washed denim baseball cap with script embroidery, star-stud detailing and a curved brim.",
+        "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Denim"
+        ],
+        "applications": [
+          "Casual",
+          "Promotional"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 12,
+        "fabric": "Washed denim",
+        "panelStyle": "6-panel",
+        "craft": "Script embroidery and star studs",
+        "series": "Denim",
+        "intro": "A washed denim baseball cap with script embroidery, star-stud detailing and a curved brim.",
+        "detail": "Denim grain and washed seam highlights give this cap a vintage texture. Script lettering and small metal-style accents add separate layers of decoration; embroidery and stud attachment are checked together during sampling.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/three-quarter.webp",
+            "alt": "Three-quarter view of Denim Cap with Script Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/front.webp",
+            "alt": "Front view of Denim Cap with Script Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/right.webp",
+            "alt": "Right side view of Denim Cap with Script Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/back.webp",
+            "alt": "Back view of Denim Cap with Script Embroidery"
+          },
+          {
+            "image": "assets/products/baseball-caps/denim-cap-with-script-and-studs/left.webp",
+            "alt": "Left side view of Denim Cap with Script Embroidery"
+          }
+        ],
+        "attributes": {
+          "Craft": "Script embroidery and star studs",
+          "Fabric": "Washed denim",
+          "Material": "Denim",
+          "Gender": "Unisex",
+          "Scene": "Casual, Promotional",
+          "Series": "Denim Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "suede-five-panel-embroidered-cap",
+        "name": "Suede 5-Panel Embroidered Cap",
+        "catalogName": "Suede 5-Panel Embroidered Cap",
+        "description": "A suede-texture five-panel baseball cap with an embroidered antelope motif and curved brim.",
+        "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/three-quarter.webp",
+        "techniques": [
+          "Embroidery"
+        ],
+        "materials": [
+          "Suede"
+        ],
+        "applications": [
+          "Casual",
+          "Outdoor"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 13,
+        "fabric": "Suede fabric",
+        "panelStyle": "5-panel",
+        "craft": "Flat silhouette embroidery",
+        "series": "Heritage",
+        "intro": "A suede-texture five-panel baseball cap with an embroidered antelope motif and curved brim.",
+        "detail": "The fine nap gives the crown a soft matte appearance. A compact animal silhouette contrasts with the fabric texture; embroidery backing and stitch direction are selected to maintain clear edges.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/three-quarter.webp",
+            "alt": "Three-quarter view of Suede 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/front.webp",
+            "alt": "Front view of Suede 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/right.webp",
+            "alt": "Right side view of Suede 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/back.webp",
+            "alt": "Back view of Suede 5-Panel Embroidered Cap"
+          },
+          {
+            "image": "assets/products/baseball-caps/suede-five-panel-embroidered-cap/left.webp",
+            "alt": "Left side view of Suede 5-Panel Embroidered Cap"
+          }
+        ],
+        "attributes": {
+          "Craft": "Flat silhouette embroidery",
+          "Fabric": "Suede fabric",
+          "Material": "Suede",
+          "Gender": "Unisex",
+          "Scene": "Casual, Outdoor",
+          "Series": "Heritage Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "two-tone-cap-with-outdoor-patch",
+        "name": "Two-Tone Cap with Outdoor Patch",
+        "catalogName": "Two-Tone Cap with Outdoor Patch",
+        "description": "A two-tone cotton baseball cap with a round landscape patch, curved brim and adjustable strap.",
+        "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/three-quarter.webp",
+        "techniques": [
+          "Patches"
+        ],
+        "materials": [
+          "Cotton"
+        ],
+        "applications": [
+          "Outdoor",
+          "Casual",
+          "Teamwear"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 14,
+        "fabric": "Cotton woven fabric",
+        "panelStyle": "6-panel",
+        "craft": "Embroidered patch",
+        "series": "Outdoor",
+        "intro": "A two-tone cotton baseball cap with a round landscape patch, curved brim and adjustable strap.",
+        "detail": "A circular mountain-and-trail badge combines several thread colors within a clean border. The contrasting visor and crown create an outdoor-inspired palette that can be adapted to your brand colors.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/three-quarter.webp",
+            "alt": "Three-quarter view of Two-Tone Cap with Outdoor Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/front.webp",
+            "alt": "Front view of Two-Tone Cap with Outdoor Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/right.webp",
+            "alt": "Right side view of Two-Tone Cap with Outdoor Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/back.webp",
+            "alt": "Back view of Two-Tone Cap with Outdoor Patch"
+          },
+          {
+            "image": "assets/products/baseball-caps/two-tone-cap-with-outdoor-patch/left.webp",
+            "alt": "Left side view of Two-Tone Cap with Outdoor Patch"
+          }
+        ],
+        "attributes": {
+          "Craft": "Embroidered patch",
+          "Fabric": "Cotton woven fabric",
+          "Material": "Cotton",
+          "Gender": "Unisex",
+          "Scene": "Outdoor, Casual, Teamwear",
+          "Series": "Outdoor Baseball Cap Collection"
+        }
+      },
+      {
+        "status": "published",
+        "slug": "nylon-cap-with-wave-logo",
+        "name": "Nylon Cap with Rubber Logo",
+        "catalogName": "Nylon Cap with Rubber Logo",
+        "description": "A lightweight nylon baseball cap with a wave-shaped rubber logo and contrasting curved brim.",
+        "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/three-quarter.webp",
+        "techniques": [
+          "Patches"
+        ],
+        "materials": [
+          "Nylon"
+        ],
+        "applications": [
+          "Sports",
+          "Outdoor",
+          "Casual"
+        ],
+        "customization": "Colors, logo artwork, closure, size, inside labels and packaging",
+        "detailTemplate": "product-detail-v1",
+        "previewNumber": 15,
+        "fabric": "Lightweight nylon fabric",
+        "panelStyle": "6-panel",
+        "craft": "Rubber logo",
+        "series": "Performance",
+        "intro": "A lightweight nylon baseball cap with a wave-shaped rubber logo and contrasting curved brim.",
+        "detail": "A smooth nylon shell gives the cap a clean technical appearance. The compact flexible front emblem follows the wave artwork; attachment and fabric compatibility are reviewed on the sample.",
+        "gallery": [
+          {
+            "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/three-quarter.webp",
+            "alt": "Three-quarter view of Nylon Cap with Rubber Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/front.webp",
+            "alt": "Front view of Nylon Cap with Rubber Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/right.webp",
+            "alt": "Right side view of Nylon Cap with Rubber Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/back.webp",
+            "alt": "Back view of Nylon Cap with Rubber Logo"
+          },
+          {
+            "image": "assets/products/baseball-caps/nylon-cap-with-wave-logo/left.webp",
+            "alt": "Left side view of Nylon Cap with Rubber Logo"
+          }
+        ],
+        "attributes": {
+          "Craft": "Rubber logo",
+          "Fabric": "Lightweight nylon fabric",
+          "Material": "Nylon",
+          "Gender": "Unisex",
+          "Scene": "Sports, Outdoor, Casual",
+          "Series": "Performance Baseball Cap Collection"
+        }
       }
     ],
     "beanies": [],

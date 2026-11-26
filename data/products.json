@@ -3,7 +3,36 @@
   "pageSize": 16,
   "categories": {
     "artist-caps": [],
-    "baseball-caps": [],
+    "baseball-caps": [
+      {
+        "status": "published",
+        "slug": "classic-curved-brim-baseball-cap",
+        "name": "Classic Curved-Brim Baseball Cap with Custom Embroidery",
+        "description": "A versatile curved-brim cap for branded collections, staff uniforms and everyday wear. Customize the logo, fabric, colors and closure.",
+        "image": "assets/embedded/8067c93e1dca73e6.webp",
+        "techniques": [
+          "Embroidery",
+          "3D Embroidery",
+          "Patches",
+          "Screen Printing",
+          "Heat Transfer"
+        ],
+        "materials": [
+          "Cotton",
+          "Cotton Twill",
+          "Polyester",
+          "Nylon"
+        ],
+        "applications": [
+          "Casual",
+          "Corporate",
+          "Promotional",
+          "Teamwear",
+          "Sports"
+        ],
+        "customization": "Fabric, colors, embroidery, printed logos, patches, back closures, inside labels and packaging"
+      }
+    ],
     "beanies": [],
     "berets": [],
     "bucket-hats": [],

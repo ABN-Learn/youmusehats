@@ -1,12 +1,14 @@
 /* YOUMUSE dynamic catalogue: only published records are rendered. */
 (function(){
+  const catalogStyle=document.createElement('style');
+  catalogStyle.textContent=`.capvora-product-grid .capvora-product-card{background:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}.capvora-product-grid .capvora-product-card>a{background:transparent!important;box-shadow:none!important}.capvora-product-grid .capvora-product-image{background:white!important;border:0!important;box-shadow:none!important}.capvora-product-grid .capvora-product-name{font-size:15px!important;font-weight:400!important;line-height:1.6!important;text-align:left!important;margin:20px 0 22px!important;color:#111!important}.capvora-product-grid .capvora-read-more{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;color:#555!important;font-size:12px!important;font-weight:700!important;letter-spacing:.04em;margin:0!important}.capvora-product-grid .capvora-read-more span{font-size:17px}.capvora-product-grid .capvora-product-meta{display:none!important}`;
+  document.head.appendChild(catalogStyle);
   const PAGE_SIZE = 16;
   const DATA_URL = '../data/products.json';
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const norm = value => String(value ?? '').toLowerCase();
   function makeCard(product, category){
-    const title = esc(product.name || 'Custom Hat');
-    const description = esc(product.description || 'Custom headwear made to your specifications.');
+    const title = esc(product.catalogName || product.name || 'Custom Hat');
     const imagePath = product.image ? (/^(https?:|data:|\/)/i.test(product.image) ? product.image : `../${product.image}`) : '';
     const image = imagePath ? `<img src="${esc(imagePath)}" alt="${title}" loading="lazy">` : '<div class="catalog-no-image">Image coming soon</div>';
     const detail = `../products/${encodeURIComponent(category)}/${encodeURIComponent(product.slug || '')}.html`;
@@ -14,8 +16,7 @@
       <a href="${detail}" aria-label="View ${title}">
         <div class="capvora-product-image">${image}</div>
         <h2 class="capvora-product-name">${title}</h2>
-        <p class="capvora-product-meta">${description}</p>
-        <span class="capvora-read-more">Read More <span>→</span></span>
+        <span class="capvora-read-more">READ MORE <span>→</span></span>
       </a></article>`;
   }
   function init(grid, allData){

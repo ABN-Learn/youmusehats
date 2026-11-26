@@ -55,7 +55,8 @@
           "Scene": "Casual wear, outdoor activities, corporate uniforms and promotional events",
           "Series": "Classic Baseball Cap Collection"
         },
-        "detailTemplate": "product-detail-v1"
+        "detailTemplate": "product-detail-v1",
+        "catalogName": "Cotton Twill Cap with Flat Embroidery"
       }
     ],
     "beanies": [],

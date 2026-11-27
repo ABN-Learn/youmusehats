@@ -2,3 +2,11 @@
 header a.brand:has(.youmuse-header-logo){display:inline-flex!important;align-items:center!important;gap:6px!important;line-height:1!important;white-space:nowrap!important;flex-shrink:0!important;text-decoration:none!important;color:#183B56!important}
 header a.brand>.youmuse-header-logo{display:block!important;width:32px!important;height:32px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;flex:0 0 32px!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
 @media(max-width:480px){header a.brand>.youmuse-header-logo{width:24px!important;height:24px!important;flex-basis:24px!important}}
+
+/* Consistent site-wide quick contact icons. */
+html body .capvora-floatbar{position:fixed!important;right:0!important;top:40%!important;bottom:auto!important;display:flex!important;flex-direction:column!important;border-radius:0!important;overflow:hidden!important;background:#183b56!important;box-shadow:0 4px 20px #10274726!important;z-index:90!important}
+html body .capvora-floatbar .capvora-float-link{display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;width:50px!important;height:50px!important;padding:12px!important;margin:0!important;border:0!important;border-bottom:1px solid white!important;border-radius:0!important;background:#183b56!important;color:white!important;text-decoration:none!important}
+html body .capvora-floatbar .capvora-float-link:last-child{border-bottom:0!important}
+html body .capvora-floatbar svg{display:block!important;width:24px!important;height:24px!important;fill:currentColor!important;stroke:none!important}
+html body .capvora-floatbar .youmuse-mobile-phone{display:none!important}
+@media(max-width:600px){html body .capvora-floatbar{top:auto!important;bottom:18px!important}html body .capvora-floatbar .capvora-float-link{width:44px!important;height:44px!important;padding:10px!important}}

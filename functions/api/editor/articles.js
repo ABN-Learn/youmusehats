@@ -43,7 +43,7 @@ export async function onRequest({ request, env }) {
       if (!fields || Object.values(fields).some(value=>typeof value !== "string") ||
           Object.keys(fields).some(key=>!["title","seo_title","description","canonical","body"].includes(key)) ||
           !fields.title?.trim() || !fields.body?.trim()) return json({error:"文章标题、正文或字段格式无效"},400);
-      fields = {...fields,canonical:fields.canonical || "https://youmusehats.com/" + path};
+      fields = {...fields,canonical:(fields.canonical || "https://youmusehats.com/" + path).replace(/\.html$/, "")};
       const canonical = new URL(fields.canonical);
       if(canonical.origin !== "https://youmusehats.com" || canonical.search || canonical.hash) return json({error:"Canonical 必须是正式站的 HTTPS 地址"},400);
     }

@@ -11,7 +11,7 @@
     const title = esc(product.catalogName || product.name || 'Custom Hat');
     const imagePath = product.image ? (/^(https?:|data:|\/)/i.test(product.image) ? product.image : `../${product.image}`) : '';
     const image = imagePath ? `<img src="${esc(imagePath)}" alt="${title}" loading="lazy">` : '<div class="catalog-no-image">Image coming soon</div>';
-    const detail = `../products/${encodeURIComponent(category)}/${encodeURIComponent(product.slug || '')}.html`;
+    const detail = `../products/${encodeURIComponent(category)}/${encodeURIComponent(product.slug || '')}`;
     return `<article class="capvora-product-card" data-product-card>
       <a href="${detail}" aria-label="View ${title}">
         <div class="capvora-product-image">${image}</div>
@@ -74,8 +74,11 @@
       grids.forEach(grid=>init(grid,data));
     }catch(error){
       grids.forEach(grid=>{
-        grid.innerHTML='<p class="catalog-load-error">Product catalogue is temporarily unavailable. Please refresh the page or contact YOUMUSE.</p>';
-        const count=document.querySelector('[data-results-count]'); if(count)count.textContent='Catalogue unavailable';
+        // Published cards in the HTML remain usable if the data request fails.
+        if(!grid.querySelector('[data-product-card]')){
+          grid.innerHTML='<p class="catalog-load-error">Product catalogue is temporarily unavailable. Please refresh the page or contact YOUMUSE.</p>';
+          const count=document.querySelector('[data-results-count]'); if(count)count.textContent='Catalogue unavailable';
+        }
       });
     }
   });

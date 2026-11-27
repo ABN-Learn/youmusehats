@@ -64,7 +64,7 @@ for category, products in catalogue.get("categories", {}).items():
             f"<div><b>{html.escape(label)}</b><span>{html.escape(value)}</span></div>"
             for label, value in specifications
         )
-        canonical = f"{BASE}/products/{category}/{slug}.html"
+        canonical = f"{BASE}/products/{category}/{slug}"
         title = f"{name} | YOUMUSE Custom Headwear"
         whatsapp_text = quote(f"Hello YOUMUSE, I am interested in {name}. Please send me a quotation.")
         page = f'''<!-- YOUMUSE GENERATED PRODUCT PAGE -->
@@ -98,12 +98,12 @@ for category, products in catalogue.get("categories", {}).items():
 for old_page in (ROOT / "products").glob("*/*.html"):
     content = old_page.read_text(encoding="utf-8", errors="ignore")
     if "<!-- YOUMUSE GENERATED PRODUCT PAGE -->" in content:
-        url = f"{BASE}/products/{old_page.parent.name}/{old_page.stem}.html"
+        url = f"{BASE}/products/{old_page.parent.name}/{old_page.stem}"
         if url not in published_urls:
             old_page.unlink()
 
 existing_urls = re.findall(r"<loc>(.*?)</loc>", SITEMAP.read_text(encoding="utf-8"))
-existing_urls = [u for u in existing_urls if not re.search(r"/products/[^/]+/[^/]+\.html$", u)]
+existing_urls = [u for u in existing_urls if not re.search(r"/products/[^/]+/[^/]+(?:\.html)?$", u)]
 all_urls = sorted(set(existing_urls + published_urls))
 xml = '<?xml version="1.0" encoding="UTF-8"?>\n'
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

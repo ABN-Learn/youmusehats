@@ -14,7 +14,7 @@ export function articleFields(html, slug) {
     title,
     seo_title: plainText(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || title),
     description: plainText(descriptionTag.match(/content="([^"]*)"/)?.[1] || ""),
-    canonical: "https://youmusehats.com/articles/" + slug + ".html",
+    canonical: "https://youmusehats.com/articles/" + slug,
     body: plainText(body)
   };
 }
@@ -84,9 +84,11 @@ function cardMarker(html) {
   return marker[0];
 }
 export function updateSitemap(xml, slug, remove) {
-  const url = "https://youmusehats.com/articles/" + slug + ".html";
-  xml = xml.replace(/<url>[\s\S]*?<\/url>/g, entry => entry.includes("<loc>" + url + "</loc>") ? "" : entry);
-  return remove ? xml : xml.replace("</urlset>", "  <url><loc>" + escapeHtml(url) + "</loc></url>\n</urlset>");
+  const url = "https://youmusehats.com/articles/" + slug;
+  xml = xml.replace(/<url>[\s\S]*?<\/url>/g, entry =>
+    entry.includes("<loc>" + url + "</loc>") || entry.includes("<loc>" + url + ".html</loc>") ? "" : entry);
+  const lastmod = new Date().toISOString().slice(0, 10);
+  return remove ? xml : xml.replace("</urlset>", "  <url><loc>" + escapeHtml(url) + "</loc><lastmod>" + lastmod + "</lastmod></url>\n</urlset>");
 }
 
 export function refillHomeArticles(home, blog) {

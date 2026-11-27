@@ -1,0 +1,6 @@
+#ym-translation-status{position:fixed;bottom:22px;left:18px;z-index:10000;max-width:min(440px,calc(100vw - 36px));padding:12px 18px;border-radius:8px;background:#183b56;color:#fff;box-shadow:0 5px 24px #0002;font:14px/1.5 Arial,sans-serif}
+#ym-translation-status[hidden]{display:none!important}
+header .cap-lang{display:flex;align-items:center;gap:7px;flex-shrink:0}
+header .cap-lang select{max-width:148px;background:#fff;border:1px solid #aebbc6;border-radius:8px;padding:8px 7px;font-size:12px;color:#183b56}
+html[dir="rtl"] .capvora-detail-info,html[dir="rtl"] .capvora-tab-panel,html[dir="rtl"] .capvora-catalog-heading{text-align:right}
+@media(max-width:480px){header .cap-lang select{max-width:115px}}

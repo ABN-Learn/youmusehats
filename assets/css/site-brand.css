@@ -1,0 +1,4 @@
+/* Shared public-site header identity. Keep templates and existing pages consistent. */
+header a.brand:has(.youmuse-header-logo){display:inline-flex!important;align-items:center!important;gap:6px!important;line-height:1!important;white-space:nowrap!important;flex-shrink:0!important;text-decoration:none!important;color:#183B56!important}
+header a.brand>.youmuse-header-logo{display:block!important;width:32px!important;height:32px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;flex:0 0 32px!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+@media(max-width:480px){header a.brand>.youmuse-header-logo{width:24px!important;height:24px!important;flex-basis:24px!important}}
